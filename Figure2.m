@@ -2,6 +2,7 @@ tic
 
 clear 
 clc
+addpath(genpath('../../matcont6p11/'))
 close all
 
 %% Panel A
