@@ -65,7 +65,7 @@ title('DSP: Common kinase and separate phosphatase (M3)','FontSize',16);
 subtitle('Substrate biphasic response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('fig2E.fig'); close all;
+savefig('fig2C.fig'); close all;
 
 %% Panel D
 % DSP DC: Enzyme biphasic response
@@ -81,7 +81,7 @@ title('DSP: Separate kinase and common phosphatase (M4)','FontSize',16);
 subtitle('Enzyme biphasic response - $A_{pp}$ vs $K2_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K2_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('fig2C.fig'); close all;
+savefig('fig2D.fig'); close all;
 
 %% Panel E
 % Two Tier Cascaded network: Substrate biphasic response
@@ -97,7 +97,7 @@ title('Cascaded enzymatic network (M6)','FontSize',16);
 subtitle('Substrate biphasic response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('fig2H.fig'); close all;
+savefig('fig2E.fig'); close all;
 
 %% Panel F
 % Coupled Covalent modification network: Substrate biphasic response
@@ -113,7 +113,7 @@ title('Coupled Covalent modifications (M7)','FontSize',16);
 subtitle('Substrate biphasic response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('fig2G.fig'); close all;
+savefig('fig2F.fig'); close all;
 
 clc
 toc
