@@ -74,7 +74,7 @@ parameters      = [160,100,75,25,250,100,100,75,1,1,1,1,50,18,0.01,36];
 initial         = [0,0,0,0,0,0];
 ap              = [15];
 ip              = 2;
-flag            = 0;
+flag            = 1;
 
 fig5 = Main(System,parameters,initial,ap,ip,flag);
 title('DSP: Separate kinase and common phosphatase (M4)','FontSize',16);
