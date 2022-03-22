@@ -12,6 +12,7 @@ parameters      = [1,1,1,20,1,1,1,1,30,0.01,1];
 initial         = [0,0,0,0];
 ap              = [10];
 ip              = 1;
+flag            = 0;
 
 fig1 = Main(System,parameters,initial,ap,ip);
 title('Protein-Protein Interaction model (M1)','FontSize',16);
@@ -27,6 +28,7 @@ parameters      = [0.1,1,1,1,1,1,1,1,1,1,1,1,0.01,2.5,1];
 initial         = [0,30,0,0,0,0];
 ap              = [13];
 ip              = 2;
+flag            = 0;
 
 fig2 = Main(System,parameters,initial,ap,ip);
 title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
@@ -40,6 +42,7 @@ parameters      = [3,1,5,1,1,1,1,1,1,1,1,1,30,0.01,10];
 initial         = [0,0,0,0,0,0];
 ap              = [14];
 ip              = 2;
+flag            = 0;
 
 fig3 = Main(System,parameters,initial,ap,ip);
 title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
@@ -55,6 +58,7 @@ parameters      = [3.5,50,100,100,20,75,50,30,1,1,1,1,0.01,6,1,1];
 initial         = [0,0,0,0,0,0];
 ap              = [13];
 ip              = 2;
+flag            = 0;
 
 fig4 = Main(System,parameters,initial,ap,ip);
 title('DSP: Common kinase and separate phosphatase (M4)','FontSize',16);
@@ -70,6 +74,7 @@ parameters      = [160,100,75,25,250,100,100,75,1,1,1,1,50,18,0.01,36];
 initial         = [0,0,0,0,0,0];
 ap              = [15];
 ip              = 2;
+flag            = 0;
 
 fig5 = Main(System,parameters,initial,ap,ip);
 title('DSP: Separate kinase and common phosphatase (M3)','FontSize',16);
@@ -85,6 +90,7 @@ parameters      = [80,35,600,400,1,1,5,60,40,25,1,1,45,0.01,10,16];
 initial         = [0,0,0,0,0,0];
 ap              = [14];
 ip              = 2;
+flag            = 0;
 
 fig6 = Main(System,parameters,initial,ap,ip)
 title('Cascaded enzymatic network (M6)','FontSize',16);
@@ -100,6 +106,7 @@ parameters      = [1,1,1,1,1,1,1,2,1,1,1,1,20,0.01,5,4];
 initial         = [0,0,0,0,0,0];
 ap              = [14];
 ip              = 4;
+flag            = 0;
 
 fig7 = Main(System,parameters,initial,ap,ip);
 title('Coupled Covalent modifications (M7)','FontSize',16);
