@@ -61,7 +61,7 @@ ip              = 2;
 flag            = 0;
 
 fig4 = Main(System,parameters,initial,ap,ip,flag);
-title('DSP: Common kinase and separate phosphatase (M4)','FontSize',16);
+title('DSP: Common kinase and separate phosphatase (M3)','FontSize',16);
 subtitle('Substrate biphasic response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
@@ -77,7 +77,7 @@ ip              = 2;
 flag            = 0;
 
 fig5 = Main(System,parameters,initial,ap,ip,flag);
-title('DSP: Separate kinase and common phosphatase (M3)','FontSize',16);
+title('DSP: Separate kinase and common phosphatase (M4)','FontSize',16);
 subtitle('Enzyme biphasic response - $A_{pp}$ vs $K2_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K2_{Total}}$','Interpreter','latex'); a.FontSize=18;
