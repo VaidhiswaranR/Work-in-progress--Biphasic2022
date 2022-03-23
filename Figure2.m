@@ -2,7 +2,8 @@ tic
 
 clear 
 clc
-addpath(genpath('../../matcont6p11/'))
+addpath(genpath('~/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures'))
+addpath(genpath('~/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/matcont6p11'))
 close all
 
 %% Panel A
