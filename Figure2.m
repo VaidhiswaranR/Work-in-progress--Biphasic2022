@@ -25,7 +25,7 @@ savefig('fig2A.fig'); close all;
 % DSP CC: Substrate and Enzyme biphasic response
 System          = 'DSP_ComK_ComP';
 parameters      = [0.1,1,1,1,1,1,1,1,1,1,1,1,0.01,2.5,1];
-initial         = [0,30,0,0,0,0];
+initial         = [0,0,0,0,0,0];
 ap              = [13];
 ip              = 2;
 flag            = 0;
@@ -90,7 +90,7 @@ parameters      = [80,35,600,400,1,1,5,60,40,25,1,1,45,0.01,10,16];
 initial         = [0,0,0,0,0,0];
 ap              = [14];
 ip              = 2;
-flag            = 0;
+flag            = 1;
 
 fig6 = Main(System,parameters,initial,ap,ip,flag)
 title('Cascaded enzymatic network (M6)','FontSize',16);
@@ -106,7 +106,7 @@ parameters      = [1,1,1,1,1,1,1,2,1,1,1,1,20,0.01,5,4];
 initial         = [0,0,0,0,0,0];
 ap              = [14];
 ip              = 4;
-flag            = 0;
+flag            = 1;
 
 fig7 = Main(System,parameters,initial,ap,ip,flag);
 title('Coupled Covalent modifications (M7)','FontSize',16);
