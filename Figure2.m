@@ -21,7 +21,7 @@ title('Protein-Protein Interaction model (M1)','FontSize',16);
 subtitle('Enzyme biphasic response - $A_{p}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{p}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/fig2A.fig'); close all;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2A.fig'); close all;
 
 %% Panel B
 % DSP CC: Substrate and Enzyme biphasic response
@@ -37,7 +37,7 @@ title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
 subtitle('Substrate biphasic response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/fig2B_a.fig'); close all;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2B_a.fig'); close all;
 
 System          = 'DSP_ComK_ComP';
 parameters      = [2,0.1,10,0.1,1,1,1,1,1,1,1,1,30,0.01,4];
@@ -51,7 +51,7 @@ title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
 subtitle('Enzyme biphasic response - $A_{pp}$ vs $K_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/fig2B_b.fig'); close all;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2B_b.fig'); close all;
 
 %% Panel C
 % DSP CD: Substrate biphasic response
@@ -67,7 +67,7 @@ title('DSP: Common kinase and separate phosphatase (M3)','FontSize',16);
 subtitle('Substrate biphasic response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/fig2C.fig'); close all;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2C.fig'); close all;
 
 %% Panel D
 % DSP DC: Enzyme biphasic response
@@ -83,7 +83,7 @@ title('DSP: Separate kinase and common phosphatase (M4)','FontSize',16);
 subtitle('Enzyme biphasic response - $A_{pp}$ vs $K2_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K2_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/fig2D.fig'); close all;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2D.fig'); close all;
 
 %% Panel E
 % Two Tier Cascaded network: Substrate biphasic response
@@ -99,7 +99,7 @@ title('Cascaded enzymatic network (M6)','FontSize',16);
 subtitle('Substrate biphasic response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/fig2E.fig'); close all;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2E.fig'); close all;
 
 %% Panel F
 % Coupled Covalent modification network: Substrate biphasic response
@@ -115,7 +115,7 @@ title('Coupled Covalent modifications (M7)','FontSize',16);
 subtitle('Substrate biphasic response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/fig2F.fig'); close all;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2F.fig'); close all;
 
 clc
 toc
