@@ -6,7 +6,7 @@ function fig = Main(System,p,initial,ap,ip,flag)
 	opt	=	contset(opt,'MaxStepsize',0.1);
 	opt	=	contset(opt,'Singularities',1);
 	opt	=	contset(opt,'MinStepsize',1e-5);
-	opt	=	contset(opt,'MaxNumPoints',1e4);
+	opt	=	contset(opt,'MaxNumPoints',8e3);
 
 	switch System
 		case 'Two_Tier_Cascade'
