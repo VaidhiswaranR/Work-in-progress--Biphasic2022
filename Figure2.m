@@ -88,7 +88,7 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 %% Panel E
 % Two Tier Cascaded network: Substrate biphasic response
 System          = 'Two_Tier_Cascade';
-parameters      = [80,35,600,400,1,1,5,60,40,25,1,1,45,0.01,10,16];
+parameters      = [80,35,200,200,1,1,5,60,40,25,1,1,45,0.01,10,16];
 initial         = [0,0,0,0,0,0];
 ap              = [14];
 ip              = 2;
