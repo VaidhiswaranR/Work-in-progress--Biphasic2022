@@ -11,82 +11,84 @@ function fig = Main(System,p,initial,ap,ip,flag)
 	switch System
 		case 'Two_Tier_Cascade'
 
-			hls	= Two_Tier_Cascade;
+			hls	= M6__Two_Tier_Cascade;
 			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16));
 			x0	= C(end,:)';
-			[x0,v0]	= init_EP_EP(@Two_Tier_Cascade,x0,p,ap);
+			[x0,v0]	= init_EP_EP(@M6__Two_Tier_Cascade,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
 
 		case 'Two_Cov_Cyc'
 
-			hls	= Two_Cov_Cyc;
+			hls	= M7__Two_Cov_Cyc;
 			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16));
 			x0	= C(end,:)';
-			[x0,v0]	= init_EP_EP(@Two_Cov_Cyc,x0,p,ap);
+			[x0,v0]	= init_EP_EP(@M7__Two_Cov_Cyc,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
 
 		case 'DSP_ComK_ComP'
 
-			hls	= DSP_ComK_ComP;
+			hls	= M2__DSP_ComK_ComP;
 			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15));
 			x0	= C(end,:)';
-			[x0,v0]	= init_EP_EP(@DSP_ComK_ComP,x0,p,ap);
+			[x0,v0]	= init_EP_EP(@M2__DSP_ComK_ComP,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
 
 		case 'DSP_SepK_SepP'
 
-			hls	= DSP_SepK_SepP;
+			hls	= M5__DSP_SepK_SepP;
 			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16),p(17));
 			x0	= C(end,:)';
-			[x0,v0]	= init_EP_EP(@DSP_SepK_SepP,x0,p,ap);
+			[x0,v0]	= init_EP_EP(@M5__DSP_SepK_SepP,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
 
 		case 'DSP_SepK_ComP'
 
-			hls	= DSP_SepK_ComP;
+			hls	= M4__DSP_SepK_ComP;
 			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16));
 			x0	= C(end,:)';
-			[x0,v0]	= init_EP_EP(@DSP_SepK_ComP,x0,p,ap);
+			[x0,v0]	= init_EP_EP(@M4__DSP_SepK_ComP,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
 
 		case 'DSP_ComK_SepP'
 
-			hls	= DSP_ComK_SepP;
+			hls	= M3__DSP_ComK_SepP;
 			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16));
 			x0	= C(end,:)';
-			[x0,v0]	= init_EP_EP(@DSP_ComK_SepP,x0,p,ap);
+			[x0,v0]	= init_EP_EP(@M3__DSP_ComK_SepP,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
 
 		case 'PPI_Full'
 
-			hls	= PPI_Full;
+			hls	= M1__PPI_Full;
 			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11));
 			x0	= C(end,:)';
-			[x0,v0]	= init_EP_EP(@PPI_Full,x0,p,ap);
+			[x0,v0]	= init_EP_EP(@M1__PPI_Full,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
+
 
 		case 'ERK'
 
-			hls	= ERK;
+			hls	= M8__ERK;
 			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16),p(17),p(18),p(19),p(20),p(21));
 			x0	= C(end,:)';
-			[x0,v0]	= init_EP_EP(@ERK,x0,p,ap);
+			[x0,v0]	= init_EP_EP(@M8__ERK,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
+			
 		case 'Biphasic_Reg_DSP'
 
 			hls	= Biphasic_Reg_DSP;
@@ -95,6 +97,7 @@ function fig = Main(System,p,initial,ap,ip,flag)
 			[x0,v0]	= init_EP_EP(@Biphasic_Reg_DSP,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
+
 
 		case 'Biphasic_Reg_Inch_DSP'
 
@@ -107,6 +110,8 @@ function fig = Main(System,p,initial,ap,ip,flag)
 
 
 	end
+
+	%%  dsfa
 
 	fig = figure
 	hold on; box on;
