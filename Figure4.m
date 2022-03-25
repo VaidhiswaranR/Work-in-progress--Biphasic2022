@@ -48,7 +48,7 @@ kb1 	= 1;    kb2 	= 1;    kb4 	= 1;
 pb2 	= 1;    pb3 	= 1;    pb4 	= 1;
 kub1 	= 1;    kub2 	= 1;    kub4 	= 1;
 pub2 	= 1;    pub3 	= 1;    pub4 	= 1;
-PTotal 	= 2.5;
+PTotal 	= 5;
 
 c1 = kb1/(k1 + kub1); c2 = kb2/(k2 + kub2); c4 = kb4/(k4 + kub4); 
 d3 = pb3/(p3 + pub3); d2 = pb2/(p2 + pub2); d4 = pb4/(p4 + pub4);
@@ -91,14 +91,16 @@ for j=1:1:m
 end
 
 figure; hold on;
-mesh(ErkTotal,MekTotal,Sol)
-xlabel('ErkTotal')
-ylabel('MekTotal')
-zlabel('App Concentration')
 Extract  = Sol(sub2ind(size(Sol),Sub_index,[1:1:n]));
 plot3(ErkTotal(1,:),MekTotal(Sub_index,1),Extract,'LineWidth',3);
 Extract  = Sol(sub2ind(size(Sol),[1:1:m],En_index));
 plot3(ErkTotal(1,En_index),MekTotal(:,1),Extract,'LineWidth',3);
+box on; grid off;
+mesh(ErkTotal,MekTotal,Sol)
+xlabel('ErkTotal')
+ylabel('MekTotal')
+zlabel('App Concentration')
+xlim([0 1e2]);  ylim([0 1e2]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4C.fig'); close all;
 
 clc
