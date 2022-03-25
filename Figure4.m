@@ -95,12 +95,12 @@ Extract  = Sol(sub2ind(size(Sol),Sub_index,[1:1:n]));
 plot3(ErkTotal(1,:),MekTotal(Sub_index,1),Extract,'LineWidth',3);
 Extract  = Sol(sub2ind(size(Sol),[1:1:m],En_index));
 plot3(ErkTotal(1,En_index),MekTotal(:,1),Extract,'LineWidth',3);
-box on; grid off;
+box on; grid on;
 mesh(ErkTotal,MekTotal,Sol)
 xlabel('ErkTotal')
 ylabel('MekTotal')
 zlabel('App Concentration')
-xlim([0 1e2]);  ylim([0 1e2]);
+xlim([0 1e2]);  ylim([0 1e2]); view(3); clim([0 max(Sol)]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4C.fig'); close all;
 
 clc
