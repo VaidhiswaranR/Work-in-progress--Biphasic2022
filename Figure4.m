@@ -100,7 +100,7 @@ mesh(ErkTotal,MekTotal,Sol)
 xlabel('ErkTotal')
 ylabel('MekTotal')
 zlabel('App Concentration')
-xlim([0 80]);  ylim([0 80]); view(3); 
+zlim([0 1.8]); xlim([0 80]);  ylim([0 80]); view(3); caxis([0 1.8]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4C.fig'); close all;
 
 clc
