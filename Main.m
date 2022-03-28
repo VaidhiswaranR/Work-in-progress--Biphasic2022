@@ -89,25 +89,64 @@ function fig = Main(System,p,initial,ap,ip,flag)
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
 			
-		case 'Biphasic_Reg_DSP'
+		case 'Bi_Cov'
 
-			hls	= Biphasic_Reg_DSP;
+			hls	= N0__Bi_Cov;
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16));
+			x0	= C(end,:)';
+			[x0,v0]	= init_EP_EP(@N0__Bi_Cov,x0,p,ap);
+			opt	=	contset(opt,'Backward',flag);
+			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
+
+
+		case 'Bi_DSP'
+
+			hls	= N1__Bi_DSP;
 			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16),p(17),p(18),p(19),p(20),p(21),p(22));
 			x0	= C(end,:)';
-			[x0,v0]	= init_EP_EP(@Biphasic_Reg_DSP,x0,p,ap);
+			[x0,v0]	= init_EP_EP(@N1__Bi_DSP,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
 
-		case 'Biphasic_Reg_Inch_DSP'
+		case 'Inch_DSP'
 
-			hls	= Biphasic_Reg_Inch_DSP;
+			hls	= N2__Inch_DSP;
 			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16),p(17),p(18),p(19),p(20),p(21),p(22),p(23));
 			x0	= C(end,:)';
-			[x0,v0]	= init_EP_EP(@Biphasic_Reg_Inch_DSP,x0,p,ap);
+			[x0,v0]	= init_EP_EP(@N2__Inch_DSP,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
+
+		case 'Net_Bi_Inc'
+
+			hls	= N3__Net_Bi_Inc;
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16),p(17),p(18),p(19));
+			x0	= C(end,:)';
+			[x0,v0]	= init_EP_EP(@N3__Net_Bi_Inc,x0,p,ap);
+			opt	=	contset(opt,'Backward',flag);
+			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
+
+
+		case 'Net_Bi_PFB'
+
+			hls	= N4__Net_Bi_PFB;
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9));
+			x0	= C(end,:)';
+			[x0,v0]	= init_EP_EP(@N4__Net_Bi_PFB,x0,p,ap);
+			opt	=	contset(opt,'Backward',flag);
+			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
+
+			
+		case 'Net_Bi_NFB'
+
+			hls	= N5__Net_Bi_NFB;
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9));
+			x0	= C(end,:)';
+			[x0,v0]	= init_EP_EP(@N5__Net_Bi_NFB,x0,p,ap);
+			opt	=	contset(opt,'Backward',flag);
+			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
 	end
 
