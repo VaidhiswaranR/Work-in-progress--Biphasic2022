@@ -21,8 +21,6 @@ function fig = Main(System,p,initial,ap,ip,flag)
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
 
-
-
 		case 'DSP_ComK_ComP'
 
 			hls	= M2__DSP_ComK_ComP;
@@ -177,7 +175,22 @@ function fig = Main(System,p,initial,ap,ip,flag)
 
 
 			else
-				disp('There is something wrong - check this');
+				if len == 6
+					% This is a special piece of code for just one particular plot
+					plot(x(end,1:s(2).index),x(ip,1:s(2).index),'-k','LineWidth',2)
+					plot(x(end,s(2).index+1:s(3).index),x(ip,s(2).index+1:s(3).index),'--k','LineWidth',2)
+					plot(x(end,s(3).index+1:s(4).index),x(ip,s(3).index+1:s(4).index),'-k','LineWidth',2)
+					plot(x(end,s(4).index+1:s(5).index),x(ip,s(4).index+1:s(5).index),'--k','LineWidth',2)
+					plot(x(end,s(5).index+1:end),x(ip,s(5).index+1:end),'-k','LineWidth',2)
+					text(x(end,s(2).index)-3,x(ip,s(2).index),'LP','HorizontalAlignment','left')
+					text(x(end,s(3).index)+3,x(ip,s(3).index),'LP','HorizontalAlignment','right')
+					text(x(end,s(4).index)-3,x(ip,s(4).index),'LP','HorizontalAlignment','right')
+					text(x(end,s(5).index)+3,x(ip,s(5).index),'LP','HorizontalAlignment','left')
+					xmax = round(x(end,s(5).index)*2/5)*5;
+					set(gca,'XLim',[0 xmax],'XTick',[0:xmax/5:xmax]);
+				else
+					disp('There is something wrong - check this');
+				end
 			end
 	end
 	ax	=	gca;
