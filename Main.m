@@ -134,7 +134,7 @@ function fig = Main(System,p,initial,ap,ip,flag)
 		case 'Net_Bi_PFB'
 
 			hls	= N4__Net_Bi_PFB;
-			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9));
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12));
 			x0	= C(end,:)';
 			[x0,v0]	= init_EP_EP(@N4__Net_Bi_PFB,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
@@ -173,7 +173,9 @@ function fig = Main(System,p,initial,ap,ip,flag)
 				plot(x(end,s(3).index+1:end),x(ip,s(3).index+1:end),'-k','LineWidth',2)
 				text(x(end,s(2).index)-3,x(ip,s(2).index),'LP','HorizontalAlignment','left')
 				text(x(end,s(3).index)+3,x(ip,s(3).index),'LP','HorizontalAlignment','right')
-				xmax = round(x(end,s(3).index)*2/5)*5;
+				xmax1 = round(x(end,s(3).index)*2/5)*5;
+				xmax2 = round(x(end,s(2).index)*2/5)*5;
+				xmax = max(xmax1,xmax2);
 				set(gca,'XLim',[0 xmax],'XTick',[0:xmax/5:xmax]);
 
 

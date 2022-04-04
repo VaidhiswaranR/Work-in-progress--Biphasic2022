@@ -134,36 +134,36 @@ close all
 % savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_b.fig'); close all;
 
 % %% Panel E
-% % Upstream reg of Covalent modification network (Extended biphasic)
-System          = '';
-parameters      = []];
-initial         = [];
-ap              = [];
-ip		        = ;
-flag            = ;
+% % Positive feedback network - perturbation of bistable response
+% System          = 'Net_Bi_PFB';
+% parameters      = [0,0.01,0.1,5,0.01,0.5,1,1,1,0.5,0.1,3];
+% initial         = [0,0];
+% ap              = [2];
+% ip		        = 1;
+% flag            = 0;
 
-fig1 = Main(System,parameters,initial,ap,ip,flag);
-title('','FontSize',16);
-subtitle('','Interpreter','latex');
-a = ylabel('','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('','Interpreter','latex'); a.FontSize=18;
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3A.fig'); close all;
+% fig9 = Main(System,parameters,initial,ap,ip,flag);
+% title('Biphasic interaction in network motif interaction','FontSize',16);
+% subtitle('Perturbation of multistability (PFB)','Interpreter','latex');
+% a = ylabel('R','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+% a = xlabel('S','Interpreter','latex'); a.FontSize=18;
+% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a.fig'); close all;
 
 % %% Panel F
-% % Upstream reg of DSP CC (biphasic response)
-% System          = '';
-% parameters      = []];
-% initial         = [];
-% ap              = [];
-% ip		        = ;
-% flag            = ;
+% % Negative feedback network - perturbation of homeostatic response
+System          = 'Net_Bi_NFB';
+parameters      = [0,0.01,0.1,5,0.01,0.5,1,1,1,0.5,0.1,3];
+initial         = [0,0];
+ap              = [2];
+ip		        = 1;
+flag            = 0;
 
-% fig1 = Main(System,parameters,initial,ap,ip,flag);
-% title('','FontSize',16);
-% subtitle('','Interpreter','latex');
-% a = ylabel('','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-% a = xlabel('','Interpreter','latex'); a.FontSize=18;
-% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3A.fig'); close all;
+fig1 = Main(System,parameters,initial,ap,ip,flag);
+title('Biphasic interaction in network motif interaction','FontSize',16);
+subtitle('Perturbation of homeostatic response (NFB)','Interpreter','latex');
+a = ylabel('R','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+a = xlabel('S','Interpreter','latex'); a.FontSize=18;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3A.fig'); close all;
 
 % %% Panel G
 % % Upstream reg of DSP CC (multistability)
