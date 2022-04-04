@@ -162,6 +162,9 @@ function fig = Main(System,p,initial,ap,ip,flag)
 		[~,in]	= max(x(ip,:))
 		
 		xmax = round(x(end,in)*4/5)*5;
+		if xmax == 0
+			xmax = 2;
+		end
 		set(gca,'XLim',[0 xmax],'XTick',[0:xmax/4:xmax]);
 		else
 			if len == 4
@@ -182,10 +185,10 @@ function fig = Main(System,p,initial,ap,ip,flag)
 					plot(x(end,s(3).index+1:s(4).index),x(ip,s(3).index+1:s(4).index),'-k','LineWidth',2)
 					plot(x(end,s(4).index+1:s(5).index),x(ip,s(4).index+1:s(5).index),'--k','LineWidth',2)
 					plot(x(end,s(5).index+1:end),x(ip,s(5).index+1:end),'-k','LineWidth',2)
-					text(x(end,s(2).index)-3,x(ip,s(2).index),'LP','HorizontalAlignment','left')
-					text(x(end,s(3).index)+3,x(ip,s(3).index),'LP','HorizontalAlignment','right')
-					text(x(end,s(4).index)-3,x(ip,s(4).index),'LP','HorizontalAlignment','right')
-					text(x(end,s(5).index)+3,x(ip,s(5).index),'LP','HorizontalAlignment','left')
+					text(x(end,s(2).index)-2,x(ip,s(2).index),'LP','HorizontalAlignment','left')
+					text(x(end,s(3).index)+2,x(ip,s(3).index),'LP','HorizontalAlignment','right')
+					text(x(end,s(4).index)-2,x(ip,s(4).index),'LP','HorizontalAlignment','right')
+					text(x(end,s(5).index)+2,x(ip,s(5).index),'LP','HorizontalAlignment','left')
 					xmax = round(x(end,s(5).index)*2/5)*5;
 					set(gca,'XLim',[0 xmax],'XTick',[0:xmax/5:xmax]);
 				else
