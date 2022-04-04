@@ -144,7 +144,7 @@ function fig = Main(System,p,initial,ap,ip,flag)
 		case 'Net_Bi_NFB'
 
 			hls	= N5__Net_Bi_NFB;
-			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9));
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12));
 			x0	= C(end,:)';
 			[x0,v0]	= init_EP_EP(@N5__Net_Bi_NFB,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
