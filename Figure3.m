@@ -88,50 +88,66 @@ close all
 % savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_a.fig'); close all;
 
 % Incoherent Feedforward in DSP - Removal of biphasic by interaction
-System          = 'Inch_DSP';
-parameters      = [1,0.001,0.2,0.001,40,4,0.001,20,0.5,0.1,10,1,10,10,1,1,1,1,1,1,60,75,3];
-initial         = [0,0,0,0,0,0,0,0];
-ap              = [2];
-ip		        = 2;
-flag            = 0;
+% System          = 'Inch_DSP';
+% parameters      = [1,0.001,0.2,0.001,40,4,0.001,20,0.5,0.1,10,1,10,10,1,1,1,1,1,1,60,75,3];
+% initial         = [0,0,0,0,0,0,0,0];
+% ap              = [2];
+% ip		        = 2;
+% flag            = 0;
 
-fig6 = Main(System,parameters,initial,ap,ip,flag);
-title('Interaction of biphasic from network and node','FontSize',16);
-subtitle('Incoherent feedforward and DSP (common enzymes)','Interpreter','latex');
-a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('S','Interpreter','latex'); a.FontSize=18;
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_b.fig'); close all;
+% fig6 = Main(System,parameters,initial,ap,ip,flag);
+% title('Interaction of biphasic from network and node','FontSize',16);
+% subtitle('Incoherent feedforward and DSP (common enzymes)','Interpreter','latex');
+% a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+% a = xlabel('S','Interpreter','latex'); a.FontSize=18;
+% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_b.fig'); close all;
+
 % %% Panel D
-% % Negative Feedback - Removal of Homeostatic response
-% System          = '';
-% parameters      = []];
-% initial         = [];
-% ap              = [];
-% ip		        = ;
-% flag            = ;
+% % Incoherent feedfoward network - biphasic in interaction (removal of behavior)
+% System          = 'Net_Bi_Inc';
+% parameters      = [1,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+% initial         = [0,0,0];
+% ap              = [4];
+% ip		        = 3;
+% flag            = 0;
 
-% fig1 = Main(System,parameters,initial,ap,ip,flag);
-% title('','FontSize',16);
-% subtitle('','Interpreter','latex');
-% a = ylabel('','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-% a = xlabel('','Interpreter','latex'); a.FontSize=18;
-% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3A.fig'); close all;
+% fig7 = Main(System,parameters,initial,ap,ip,flag);
+% title('Biphasic interaction in network motif interaction','FontSize',16);
+% subtitle('Removal of Biphasic response from incoherent feedforward','Interpreter','latex');
+% a = ylabel('$R_s$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+% a = xlabel('S','Interpreter','latex'); a.FontSize=18;
+% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_a.fig'); close all;
+
+% % Incoherent feedfoward network - biphasic in interaction (removal of behavior)
+% System          = 'Net_Bi_Inc';
+% parameters      = [1,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+% initial         = [0,0,0];
+% ap              = [4];
+% ip		        = 3;
+% flag            = 0;
+
+% fig8 = Main(System,parameters,initial,ap,ip,flag);
+% title('Biphasic interaction in network motif interaction','FontSize',16);
+% subtitle('Introduction of Multiphasic response from incoherent feedforward','Interpreter','latex');
+% a = ylabel('$R_s$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+% a = xlabel('S','Interpreter','latex'); a.FontSize=18;
+% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_b.fig'); close all;
 
 % %% Panel E
 % % Upstream reg of Covalent modification network (Extended biphasic)
-% System          = '';
-% parameters      = []];
-% initial         = [];
-% ap              = [];
-% ip		        = ;
-% flag            = ;
+System          = '';
+parameters      = []];
+initial         = [];
+ap              = [];
+ip		        = ;
+flag            = ;
 
-% fig1 = Main(System,parameters,initial,ap,ip,flag);
-% title('','FontSize',16);
-% subtitle('','Interpreter','latex');
-% a = ylabel('','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-% a = xlabel('','Interpreter','latex'); a.FontSize=18;
-% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3A.fig'); close all;
+fig1 = Main(System,parameters,initial,ap,ip,flag);
+title('','FontSize',16);
+subtitle('','Interpreter','latex');
+a = ylabel('','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+a = xlabel('','Interpreter','latex'); a.FontSize=18;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3A.fig'); close all;
 
 % %% Panel F
 % % Upstream reg of DSP CC (biphasic response)

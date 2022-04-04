@@ -124,7 +124,7 @@ function fig = Main(System,p,initial,ap,ip,flag)
 		case 'Net_Bi_Inc'
 
 			hls	= N3__Net_Bi_Inc;
-			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16),p(17),p(18),p(19));
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16),p(17),p(18),p(19),p(20),p(21));
 			x0	= C(end,:)';
 			[x0,v0]	= init_EP_EP(@N3__Net_Bi_Inc,x0,p,ap);
 			opt	=	contset(opt,'Backward',flag);
