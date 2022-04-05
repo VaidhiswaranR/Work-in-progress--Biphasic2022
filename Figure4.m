@@ -10,33 +10,35 @@ close all
 %% Panel A 
 % Substrate biphasic response in pYpTErk
 System          = 'ERK';
-parameters      = [0.0747,0.0357,0.0104,0.18,0.18,0.18,0.27,0.27,0.27,0.0338,0.00851,0.0106,0.18,0.18,0.18,0.27,0.27,0.27,0.01,0.12,1];
+parameters      = [0.0747,0.0957,0.0104,0.18,0.18,0.18,0.27,0.27,0.27,0.0338,0.00851,0.0106,0.18,0.18,0.18,0.27,0.27,0.27,0.01,0.12,1];
 initial         = [0,0,0,0,0,0,0,0,0];
 ap              = [19];
 ip		        = 5;
 flag            = 0;
 
 fig1 = Main(System,parameters,initial,ap,ip,flag);
-title('Ordered Model of Erk Regulation','FontSize',20);
+title('Ordered Model of Erk Regulation','FontSize',16);
 subtitle('Substrate biphasic response - pYpTErk vs $Erk_{Total}$','Interpreter','latex');
-a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=20;
-a = xlabel('$Erk_{Total}$','Interpreter','latex'); a.FontSize=20;
+a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=15;
+a = xlabel('$Erk_{Total}$','Interpreter','latex'); a.FontSize=15;
+xlim([0 200]); ylim([0 3]); xticks('auto'); yticks('auto'); zticks('auto');
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4A.fig'); close all;
 
 %% Panel B 
 % Enzyme biphasic response in pYpTErk
 System          = 'ERK';
-parameters      = [2,1,1,0.18,0.18,0.18,0.27,0.27,0.27,0.1,1,1,0.18,0.18,0.18,0.27,0.27,0.27,100,0.01,5];
+parameters      = [2,1,1,0.18,0.18,0.18,0.27,0.27,0.27,0.1,5,0.1,0.18,0.18,0.18,0.27,0.27,0.27,100,0.01,5];
 initial         = [0,0,0,0,0,0,0,0,0];
 ap              = [20];
 ip		        = 5;
 flag            = 0;
 
 fig2 = Main(System,parameters,initial,ap,ip,flag);
-title('Ordered Model of Erk Regulation','FontSize',20);
+title('Ordered Model of Erk Regulation','FontSize',16);
 subtitle('Enzyme biphasic response - pYpTErk vs $Mek_{Total}$','Interpreter','latex');
-a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=20;
-a = xlabel('$Mek_{Total}$','Interpreter','latex'); a.FontSize=20;
+a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=15;
+a = xlabel('$Mek_{Total}$','Interpreter','latex'); a.FontSize=15;
+xlim([0 180]); ylim([0 60]); xticks('auto'); yticks('auto'); zticks('auto');
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4B.fig'); close all;
 
 %% Panel C
@@ -90,17 +92,19 @@ for j=1:1:m
 	Sub_index(j) = v;
 end
 
-figure; hold on;
+fig3 = figure; hold on;
 Extract  = Sol(sub2ind(size(Sol),Sub_index,[1:1:n]));
 plot3(ErkTotal(1,:),MekTotal(Sub_index,1),Extract,'LineWidth',3);
 Extract  = Sol(sub2ind(size(Sol),[1:1:m],En_index));
 plot3(ErkTotal(1,En_index),MekTotal(:,1),Extract,'LineWidth',3);
 box on; grid on;
 mesh(ErkTotal,MekTotal,Sol)
-a = xlabel('ErkTotal'); a.FontSize = 22;
-a = ylabel('MekTotal'); a.FontSize = 22;
-a = zlabel('App Concentration'); a.FontSize = 22;
-zlim([0 1.8]); xlim([0 80]);  ylim([0 80]); view(3); caxis([0 1.8]);
+title(["Simultaneous existence of enzyme and substrate","biphasic dose response in Erk regulation"],'FontSize',16)
+a = ylabel('$Mek_{Total}$','Interpreter','latex','fontweight','bold','HorizontalAlignment','right'); a.FontSize = 15;
+a = xlabel('$Erk_{Total}$','Interpreter','latex','fontweight','bold','HorizontalAlignment','left'); a.FontSize = 15;
+a = zlabel('pYpTErk','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center','fontweight','bold'); a.FontSize = 15;
+zlim([0 2]); xlim([0 80]);  ylim([0 80]); view(3); caxis([0 2]);
+h = gca(); h.FontWeight = 'bold'; h.LineWidth = 0.8;
 xticks('auto'); yticks('auto'); zticks('auto');
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4C.fig'); close all;
 
