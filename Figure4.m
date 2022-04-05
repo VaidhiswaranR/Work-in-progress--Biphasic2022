@@ -17,10 +17,10 @@ ip		        = 5;
 flag            = 0;
 
 fig1 = Main(System,parameters,initial,ap,ip,flag);
-title('Ordered Model of Erk Regulation','FontSize',16);
+title('Ordered Model of Erk Regulation','FontSize',20);
 subtitle('Substrate biphasic response - pYpTErk vs $Erk_{Total}$','Interpreter','latex');
-a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('$Erk_{Total}$','Interpreter','latex'); a.FontSize=18;
+a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=20;
+a = xlabel('$Erk_{Total}$','Interpreter','latex'); a.FontSize=20;
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4A.fig'); close all;
 
 %% Panel B 
@@ -33,10 +33,10 @@ ip		        = 5;
 flag            = 0;
 
 fig2 = Main(System,parameters,initial,ap,ip,flag);
-title('Ordered Model of Erk Regulation','FontSize',16);
+title('Ordered Model of Erk Regulation','FontSize',20);
 subtitle('Enzyme biphasic response - pYpTErk vs $Mek_{Total}$','Interpreter','latex');
-a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('$Mek_{Total}$','Interpreter','latex'); a.FontSize=18;
+a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=20;
+a = xlabel('$Mek_{Total}$','Interpreter','latex'); a.FontSize=20;
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4B.fig'); close all;
 
 %% Panel C
@@ -97,10 +97,11 @@ Extract  = Sol(sub2ind(size(Sol),[1:1:m],En_index));
 plot3(ErkTotal(1,En_index),MekTotal(:,1),Extract,'LineWidth',3);
 box on; grid on;
 mesh(ErkTotal,MekTotal,Sol)
-xlabel('ErkTotal')
-ylabel('MekTotal')
-zlabel('App Concentration')
+a = xlabel('ErkTotal'); a.FontSize = 22;
+a = ylabel('MekTotal'); a.FontSize = 22;
+a = zlabel('App Concentration'); a.FontSize = 22;
 zlim([0 1.8]); xlim([0 80]);  ylim([0 80]); view(3); caxis([0 1.8]);
+xticks('auto'); yticks('auto'); zticks('auto');
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4C.fig'); close all;
 
 clc
