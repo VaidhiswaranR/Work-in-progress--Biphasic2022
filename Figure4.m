@@ -93,13 +93,13 @@ for j=1:1:m
 end
 
 fig3 = figure; hold on;
-Extract  = Sol(sub2ind(size(Sol),Sub_index,[1:1:n]));
-plot3(ErkTotal(1,:),MekTotal(Sub_index,1),Extract,'LineWidth',3);
-Extract  = Sol(sub2ind(size(Sol),[1:1:m],En_index));
-plot3(ErkTotal(1,En_index),MekTotal(:,1),Extract,'LineWidth',3);
+mesh(ErkTotal,MekTotal,Sol);
 box on; grid on;
-mesh(ErkTotal,MekTotal,Sol)
-title(["Simultaneous existence of enzyme and substrate","biphasic dose response in Erk regulation"],'FontSize',16)
+Extract  = Sol(sub2ind(size(Sol),Sub_index,[1:1:n]));
+plot3(ErkTotal(1,:),MekTotal(Sub_index,1),Extract,'LineWidth',3.5);
+Extract  = Sol(sub2ind(size(Sol),[1:1:m],En_index));
+plot3(ErkTotal(1,En_index),MekTotal(:,1),Extract,'LineWidth',3.5);
+% title(["Simultaneous existence of enzyme and substrate","biphasic dose response in Erk regulation"],'FontSize',16)
 a = ylabel('$Mek_{Total}$','Interpreter','latex','fontweight','bold','HorizontalAlignment','right'); a.FontSize = 15;
 a = xlabel('$Erk_{Total}$','Interpreter','latex','fontweight','bold','HorizontalAlignment','left'); a.FontSize = 15;
 a = zlabel('pYpTErk','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center','fontweight','bold'); a.FontSize = 15;

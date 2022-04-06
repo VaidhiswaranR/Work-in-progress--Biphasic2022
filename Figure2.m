@@ -8,7 +8,7 @@ mkdir('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figu
 close all
 
 %% Panel A
-% PPI system (Full model): Enzyme Biphasic response
+% PPI system (Full model): Enzyme biphasic dose response
 System          = 'PPI_Full';
 parameters      = [1,1,1,20,1,1,1,1,30,0.01,1];
 initial         = [0,0,0,0];
@@ -18,13 +18,14 @@ flag            = 0;
 
 fig1 = Main(System,parameters,initial,ap,ip,flag);
 title('Protein-Protein Interaction model (M1)','FontSize',16);
-subtitle('Enzyme biphasic response - $A_{p}$ vs $A_{Total}$','Interpreter','latex');
+subtitle('Enzyme biphasic dose response - $A_{p}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{p}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
+xlim([0 80]); xticks('auto'); 
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2A.fig'); close all;
 
 %% Panel B
-% DSP CC: Substrate and Enzyme biphasic response
+% DSP CC: Substrate and Enzyme biphasic dose response
 System          = 'DSP_ComK_ComP';
 parameters      = [0.1,1,1,1,1,1,1,1,1,1,1,1,0.01,2.5,1];
 initial         = [0,0,0,0,0,0];
@@ -34,9 +35,10 @@ flag            = 0;
 
 fig2 = Main(System,parameters,initial,ap,ip,flag);
 title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
-subtitle('Substrate biphasic response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
+subtitle('Substrate biphasic dose response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
+xlim([0 30]); xticks('auto')
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2B_a.fig'); close all;
 
 System          = 'DSP_ComK_ComP';
@@ -48,13 +50,14 @@ flag            = 0;
 
 fig3 = Main(System,parameters,initial,ap,ip,flag);
 title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
-subtitle('Enzyme biphasic response - $A_{pp}$ vs $K_{Total}$','Interpreter','latex');
+subtitle('Enzyme biphasic dose response - $A_{pp}$ vs $K_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K_{Total}}$','Interpreter','latex'); a.FontSize=18;
+xlim([0 75]); xticks('auto'); 
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2B_b.fig'); close all;
 
 %% Panel C
-% DSP CD: Substrate biphasic response
+% DSP CD: Substrate biphasic dose response
 System          = 'DSP_ComK_SepP';
 parameters      = [3.5,50,100,100,20,75,50,30,1,1,1,1,0.01,6,1,1];
 initial         = [0,0,0,0,0,0];
@@ -64,13 +67,13 @@ flag            = 0;
 
 fig4 = Main(System,parameters,initial,ap,ip,flag);
 title('DSP: Common kinase and separate phosphatase (M3)','FontSize',16);
-subtitle('Substrate biphasic response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
+subtitle('Substrate biphasic dose response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2C.fig'); close all;
 
 %% Panel D
-% DSP DC: Enzyme biphasic response
+% DSP DC: Enzyme biphasic dose response
 System          = 'DSP_SepK_ComP';
 parameters      = [200,40,200,5,250,100,100,75,1,1,1,1,50,18,0.01,30];
 initial         = [0,0,0,0,0,0];
@@ -80,13 +83,14 @@ flag            = 1;
 
 fig5 = Main(System,parameters,initial,ap,ip,flag);
 title('DSP: Separate kinase and common phosphatase (M4)','FontSize',16);
-subtitle('Enzyme biphasic response - $A_{pp}$ vs $K2_{Total}$','Interpreter','latex');
+subtitle('Enzyme biphasic dose response - $A_{pp}$ vs $K2_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K2_{Total}}$','Interpreter','latex'); a.FontSize=18;
+xlim([0 60]); xticks('auto'); %ylim([0 8]); yticks('auto')
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2D.fig'); close all;
 
 %% Panel E
-% Two Tier Cascaded network: Substrate biphasic response
+% Two Tier Cascaded network: Substrate biphasic dose response
 System          = 'Two_Tier_Cascade';
 parameters      = [80,35,200,200,1,1,5,60,40,25,1,1,45,0.01,10,16];
 initial         = [0,0,0,0,0,0];
@@ -96,15 +100,16 @@ flag            = 1;
 
 fig6 = Main(System,parameters,initial,ap,ip,flag)
 title('Cascaded enzymatic network (M6)','FontSize',16);
-subtitle('Substrate biphasic response - $B_p$ vs $B_{Total}$','Interpreter','latex');
+subtitle('Substrate biphasic dose response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
+xlim([0 100]); xticks('auto');
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2E.fig'); close all;
 
 %% Panel F
-% Coupled Covalent modification network: Substrate biphasic response
+% Coupled Covalent modification network: Substrate biphasic dose response
 System          = 'Two_Cov_Cyc';
-parameters      = [4,0.1,1,1,1,1,0.1,3,1,1,1,1,8,0.01,4,3];
+parameters      = [4,0.1,0.9,8,1,1,0.1,3,1,1,1,1,8,0.01,4,3];
 initial         = [0,0,0,0,0,0];
 ap              = [14];
 ip              = 4;
@@ -112,9 +117,10 @@ flag            = 0;
 
 fig7 = Main(System,parameters,initial,ap,ip,flag);
 title('Coupled Covalent modifications (M7)','FontSize',16);
-subtitle('Substrate biphasic response - $B_p$ vs $B_{Total}$','Interpreter','latex');
+subtitle('Substrate biphasic dose response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
+xlim([0 100]); xticks('auto'); %ylim([0 8]); yticks('auto'); 
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2F.fig'); close all;
 
 clc
