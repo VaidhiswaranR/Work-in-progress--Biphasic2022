@@ -87,8 +87,8 @@ ip		        = 2;
 flag            = 0;
 
 fig3 = Main(System,parameters,initial,ap,ip,flag);
-title('Upstream regulation of DSP (common enzymes)','FontSize',16);
-subtitle('Introduction of multiphasic and bistable response','Interpreter','latex');
+title('Upstream Signal Regulation of DSP (common enzymes)','FontSize',16);
+subtitle('Multiphasic and bistable response','Interpreter','latex');
 a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_b.fig'); close all;
@@ -129,7 +129,7 @@ ip		        = 2;
 flag            = 1;
 
 fig5 = Main(System,parameters,initial,ap,ip,flag);
-title('Interaction of biphasic from network and node (iFFW and DSP)','FontSize',16);
+title('Interaction of biphasic from network and biochemistry (iFFW and DSP)','FontSize',16);
 subtitle('Induction multiphasic dose response','Interpreter','latex');
 a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
@@ -139,7 +139,7 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 % Incoherent Feedforward in DSP - Removal of biphasic by interaction
 System          = 'Inch_DSP';
 parameters      = [0,0.001,0.2,0.001,30,4,0.001,20,0.5,0.1,10,1,10,10,1,1,1,1,1,1,100,75,2];
-initial         = [0,0,0,0,0,0,0,0];
+initial         = [0,0,0,0,0,0,0,0];[!h]
 ap              = [2];
 ip		        = 2;
 flag            = 0;
