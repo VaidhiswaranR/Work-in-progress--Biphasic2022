@@ -150,6 +150,15 @@ function fig = Main(System,p,initial,ap,ip,flag)
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
+		case 'S1_Random_DD'
+
+			hls	= S1_Random_DD;
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14),p(15),p(16),p(17),p(18),p(19),p(20),p(21),p(22),p(23),p(24),p(25),p(26),p(27),p(28),p(29));
+			x0	= C(end,:)';
+			[x0,v0]	= init_EP_EP(@S1_Random_DD,x0,p,ap);
+			opt	=	contset(opt,'Backward',flag);
+			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
+
 	end
 
 	%%  dsfa
