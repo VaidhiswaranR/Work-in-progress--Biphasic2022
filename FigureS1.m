@@ -26,6 +26,33 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 
 %% Panel B
 % DSP CC - Enzyme biphasic (combination of multistability and biphasic)
+System          = 'DSP_ComK_ComP';
+parameters      = [100,6,5,20,0.5,30,100,750,1,1,1,1,65,0.01,30];
+initial         = [0,0,0,0,0,0];
+ap              = [14];
+ip              = 2;
+flag            = 0;
+
+fig1 = Main(System,parameters,initial,ap,ip,flag);
+title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
+subtitle('Enzyme biphasic response - $A_{pp}$ vs $K_{Total}$','Interpreter','latex');
+a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('$\bf{K_{Total}}$','Interpreter','latex'); a.FontSize=18;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS1/FigS1B_a.fig'); close all;
+
+System          = 'DSP_ComK_ComP';
+parameters      = [100,6,5,20,0.5,30,100,750,1,1,1,1,80,0.01,30];
+initial         = [0,0,0,0,0,0];
+ap              = [14];
+ip              = 2;
+flag            = 0;
+
+fig1 = Main(System,parameters,initial,ap,ip,flag);
+title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
+subtitle('Multistability','Interpreter','latex');
+a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('$\bf{K_{Total}}$','Interpreter','latex'); a.FontSize=18;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS1/FigS1B_b.fig'); close all;
 
 %% Panel C
 % DSP CD - Enzyme Biphasic (combination of multistability and biphasic)
