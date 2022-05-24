@@ -212,7 +212,7 @@ ip		        = 3;
 flag            = 0;
 
 fig8 = Main(System,parameters,initial,ap,ip,flag);
-title('Biphasic interaction within PFB network motif (N4)','FontSize',16);
+title('Biphasic interaction within iFFW network motif (N3)','FontSize',16);
 subtitle('Introduction of Multiphasic dose response','Interpreter','latex');
 a = ylabel('$R_s$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
