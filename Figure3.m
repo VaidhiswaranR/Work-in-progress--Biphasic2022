@@ -276,3 +276,10 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 
 clc
 toc
+
+
+%% New stuff that is being added in the last minute!
+
+
+fig10 = figure  ;
+jsdakfadlsfkjadsl;kfa
