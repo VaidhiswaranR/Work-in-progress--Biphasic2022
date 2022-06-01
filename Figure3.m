@@ -280,6 +280,29 @@ toc
 
 %% New stuff that is being added in the last minute!
 
+System          = 'Net_Bi_NFB';
+parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.001,0.1,0.1,0.01,3];
+initial         = [0,0];
+ap              = [2];
+ip		        = 1;
+flag            = 0;
 
-fig10 = figure  ;
-jsdakfadlsfkjadsl;kfa
+fig10 = Main(System,parameters,initial,ap,ip,flag);
+xlim([0 80]); ylim([0 40]); xticks('auto'); yticks('auto');
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3F_a0.fig'); close all;
+
+System          = 'Net_Bi_NFB';
+parameters      = [1,0.01,0.5,0.8,0.1,0.1,0.001,0.1,0.1,0.01,3];
+initial         = [0,0];
+ap              = [2];
+ip		        = 1;
+flag            = 0;
+
+fig10 = Main(System,parameters,initial,ap,ip,flag);
+xlim([0 80]); ylim([0 40]); xticks('auto'); yticks('auto');
+title('Biphasic interaction within NFB network motif (N5)','FontSize',16);
+subtitle('Perturbation of homeostatic response','Interpreter','latex');
+a = ylabel('R','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+a = xlabel('S','Interpreter','latex'); a.FontSize=18;
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3F_a.fig'); close all;
+
