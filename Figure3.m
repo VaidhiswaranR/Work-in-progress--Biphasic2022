@@ -221,7 +221,7 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 %% Panel E
 % Positive feedback network - perturbation of bistable response
 System          = 'Net_Bi_PFB_Cl';
-parameters      = [];
+parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.001,0.1,2,0.1,0.01,3,5];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -232,7 +232,7 @@ ylim([0 30]); yticks([0:6:30]); xlim([0 20]); xticks([0:5:20]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a0.fig'); close all;
 
 System          = 'Net_Bi_PFB_Cl';
-parameters      = [];
+parameters      = [1,0.01,0.5,0.8,0.1,0.1,0.001,0.1,2,0.1,0.01,3,5];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -249,7 +249,7 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 %% Panel F
 % Negative feedback network - perturbation of homeostatic response
 System          = 'Net_Bi_NFB_Cl';
-parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.001,0.1,0.1,0.01,3];
+parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.001,0.1,0.1,0.01,3,5];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;

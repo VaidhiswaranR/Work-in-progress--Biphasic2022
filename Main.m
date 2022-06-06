@@ -150,6 +150,25 @@ function fig = Main(System,p,initial,ap,ip,flag)
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
+		case 'Net_Bi_PFB_Cl'
+
+			hls	= N4__Net_Bi_PFB_Cl;
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14));
+			x0	= C(end,:)';
+			[x0,v0]	= init_EP_EP(@N4__Net_Bi_PFB_Cl,x0,p,ap);
+			opt	=	contset(opt,'Backward',flag);
+			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
+
+			
+		case 'Net_Bi_NFB_Cl'
+
+			hls	= N5__Net_Bi_NFB_Cl;
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10),p(11),p(12),p(13),p(14));
+			x0	= C(end,:)';
+			[x0,v0]	= init_EP_EP(@N5__Net_Bi_NFB_Cl,x0,p,ap);
+			opt	=	contset(opt,'Backward',flag);
+			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
+
 		case 'S1_Random_DD'
 
 			hls	= S1_Random_DD;
