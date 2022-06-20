@@ -221,18 +221,18 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 %% Panel E
 % Positive feedback network - perturbation of bistable response
 System          = 'Net_Bi_PFB_Cl';
-parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.001,0.1,2,0.1,0.01,3,5];
+parameters      = [0,0.01,1,0.1,0.5,1,0.1,2,1,0.1,1,0.05,4,15];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
 flag            = 0;
 
 fig90 = Main(System,parameters,initial,ap,ip,flag);
-ylim([0 30]); yticks([0:6:30]); xlim([0 20]); xticks([0:5:20]);
+ylim([0 10]); yticks([0:2:10]); xlim([0 2]); xticks([0:0.4:2]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a0.fig'); close all;
 
 System          = 'Net_Bi_PFB_Cl';
-parameters      = [1,0.01,0.5,0.8,0.1,0.1,0.001,0.1,2,0.1,0.01,3,5];
+parameters      = [1,0.01,1,0.1,0.5,1,0.1,2,1,0.1,1,0.05,4£,15];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -243,13 +243,13 @@ title('Biphasic interaction within PFB network motif (N4)','FontSize',16);
 subtitle('Removal of multistability','Interpreter','latex');
 a = ylabel('R','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
-ylim([0 12]); yticks([0:4:12]); xlim([0 250]); xticks([0:50:250]);
+ylim([0 10]); yticks([0:2:10]); xlim([0 2]); xticks([0:0.4:2]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a.fig'); close all;
 
 %% Panel F
 % Negative feedback network - perturbation of homeostatic response
 System          = 'Net_Bi_NFB_Cl';
-parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.001,0.1,0.1,0.01,3,5];
+parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.01,0.1,0.1,0.1,0.01,3,5];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -260,7 +260,7 @@ xlim([0 80]); ylim([0 40]); xticks('auto'); yticks('auto');
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3F_a0.fig'); close all;
 
 System          = 'Net_Bi_NFB_Cl';
-parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.001,0.1,0.1,0.01,3];
+parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.01,0.1,0.1,0.1,0.01,3];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;

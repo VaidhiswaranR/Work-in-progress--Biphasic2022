@@ -204,6 +204,9 @@ function fig = Main(System,p,initial,ap,ip,flag)
 				xmax1 = round(x(end,s(3).index)*2/5)*5;
 				xmax2 = round(x(end,s(2).index)*2/5)*5;
 				xmax = max(xmax1,xmax2);
+				if xmax == 0
+					xmax = 2;
+				end
 				set(gca,'XLim',[0 xmax],'XTick',[0:xmax/5:xmax]);
 
 
