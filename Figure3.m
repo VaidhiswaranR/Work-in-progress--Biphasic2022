@@ -165,7 +165,10 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 
 % Incoherent Feedforward in DSP - Removal of biphasic and introduction of new behavior
 System          = 'Inch_DSP';
-parameters      = [];
+parameters      = [0,0.01,1,0.01,8,0.25,0.01,4,0.1,1,1,1,40,10,1,1,1,1,1,1,40,1,1];
+%ua = 1, ud = 8, ubeta = 0.01, dd = 4, dbeta = 0.01, k1 = 0.1, k2 = 1, k3 = 1, k4 = 1, kb1 = 40, kb2 = 10, kb3 = 1,
+%kb4 = 1, kub1 = 1, kub2 = 1, kub3 = 1, kub4 = 1, AT otal = 40, PT otal = 1.1, KT otal = 1, kiF F W = 0,0,05,0.1,0.25,1
+% Switch,S,ua,ub,ud,da,db,dd,k1,k2,k3,k4,kb1,kb2,kb3,kb4,kub1,kub2,kub3,kub4,ATotal,KTotal,PTotal
 initial         = [0,0,0,0,0,0,0,0];
 ap              = [2];
 ip		        = 2;
