@@ -157,12 +157,38 @@ flag            = 0;
 
 fig6 = Main(System,parameters,initial,ap,ip,flag);
 title('Incoherent feedforward regulation of DSP (common enzymes) (N2)','FontSize',16);
-subtitle('Removal of biphasic dose response','Interpreter','latex');
+subtitle('Removal of biphasic dose response and introduction of new behavior','Interpreter','latex');
 a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
 xlim([0 20]); xticks([0:5:20]); ylim([0 120]); yticks([0:30:120]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_b.fig'); close all;
 
+% Incoherent Feedforward in DSP - Removal of biphasic and introduction of new behavior
+System          = 'Inch_DSP';
+parameters      = [];
+initial         = [0,0,0,0,0,0,0,0];
+ap              = [2];
+ip		        = 2;
+flag            = 0;
+
+fig60 = Main(System,parameters,initial,ap,ip,flag);
+xlim([0 20]); xticks([0:5:20]); ylim([0 60]); yticks([0:15:60]);
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_b0.fig'); close all;
+
+System          = 'Inch_DSP';
+parameters      = [];
+initial         = [0,0,0,0,0,0,0,0];
+ap              = [2];
+ip		        = 2;
+flag            = 0;
+
+fig6 = Main(System,parameters,initial,ap,ip,flag);
+title('Incoherent feedforward regulation of DSP (common enzymes) (N2)','FontSize',16);
+subtitle('Removal of biphasic dose response and introduction of new behavior','Interpreter','latex');
+a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+a = xlabel('S','Interpreter','latex'); a.FontSize=18;
+xlim([0 20]); xticks([0:5:20]); ylim([0 120]); yticks([0:30:120]);
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_b.fig'); close all;
 %% Panel D
 % Incoherent feedfoward network - biphasic in interaction (removal of behavior)
 System          = 'Net_Bi_Inc';
