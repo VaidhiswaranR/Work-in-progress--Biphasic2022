@@ -10,19 +10,23 @@ close all
 %% Panel A
 % Upstream regulation of covalent modification cycle
 System          = 'Bi_Cov';
-parameters      = [0,0.01,1,0.01,1,1.5,0.9,4,1,1,1,1,1,20,5,3];
+parameters      = [0,0.01,1,0.01,1,2.25*4,sqrt(2)/20,4,1,1,1,1,1,20,5,3];
+% parameters      = [0,0.01,1,0.01,1,1.5,0.9,4,1,1,1,1,1,20,5,3];
+% b2 = sqrt(2)/A0
+% b1 = 2.25*k1
 initial         = [0,0,0,0];
 ap              = [2];
 ip		        = 1;
 flag            = 0;
 
 fig10 = Main(System,parameters,initial,ap,ip,flag);
-xlim([0 15]); xticks([0 2.5 5 7.5 10 12.5 15]);
+xlim([0 200]); xticks([0 50 100 150 200]);
 ylim([0 20]); yticks([0 5 10 15 20]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3A0.fig'); close all;
 
 System          = 'Bi_Cov';
-parameters      = [1,0.01,1,0.01,1,1.5,0.9,4,1,1,1,1,1,20,5,3];
+parameters      = [1,0.01,1,0.01,1,2.25*4,sqrt(2)/20,4,1,1,1,1,1,20,5,3];
+% parameters      = [1,0.01,1,0.01,1,1.5,0.9,4,1,1,1,1,1,20,5,3];
 initial         = [0,0,0,0];
 ap              = [2];
 ip		        = 1;
@@ -33,7 +37,7 @@ title('Upstream Signal Regulation of Covalent Modification Cycle (N0)','FontSize
 subtitle('Biphasic response with signal','Interpreter','latex');
 a = ylabel('$A_p$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
-xlim([0 15]); xticks([0 2.5 5 7.5 10 12.5 15]);
+xlim([0 200]); xticks([0 50 100 150 200]);
 ylim([0 20]); yticks([0 5 10 15 20]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3A.fig'); close all;
 
@@ -163,35 +167,33 @@ a = xlabel('S','Interpreter','latex'); a.FontSize=18;
 xlim([0 20]); xticks([0:5:20]); ylim([0 120]); yticks([0:30:120]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_b.fig'); close all;
 
-% Incoherent Feedforward in DSP - Removal of biphasic and introduction of new behavior
-System          = 'Inch_DSP';
-parameters      = [0,0.01,1,0.01,8,0.25,0.01,4,0.1,1,1,1,40,10,1,1,1,1,1,1,40,1,1];
-%ua = 1, ud = 8, ubeta = 0.01, dd = 4, dbeta = 0.01, k1 = 0.1, k2 = 1, k3 = 1, k4 = 1, kb1 = 40, kb2 = 10, kb3 = 1,
-%kb4 = 1, kub1 = 1, kub2 = 1, kub3 = 1, kub4 = 1, AT otal = 40, PT otal = 1.1, KT otal = 1, kiF F W = 0,0,05,0.1,0.25,1
-% Switch,S,ua,ub,ud,da,db,dd,k1,k2,k3,k4,kb1,kb2,kb3,kb4,kub1,kub2,kub3,kub4,ATotal,KTotal,PTotal
-initial         = [0,0,0,0,0,0,0,0];
-ap              = [2];
-ip		        = 2;
-flag            = 0;
+% % Incoherent Feedforward in DSP - Introduction of new behavior
+% System          = 'Inch_DSP';
+% parameters      = [0,0.01,1,0.01,8,0.25,0.01,4,0.1,1,1,1,40,10,1,1,1,1,1,1,40,1,1];
+% initial         = [0,0,0,0,0,0,0,0];
+% ap              = [2];
+% ip		        = 2;
+% flag            = 0;
 
-fig60 = Main(System,parameters,initial,ap,ip,flag);
-xlim([0 20]); xticks([0:5:20]); ylim([0 60]); yticks([0:15:60]);
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_b0.fig'); close all;
+% fig60 = Main(System,parameters,initial,ap,ip,flag);
+% xlim([0 20]); xticks([0:5:20]); ylim([0 60]); yticks([0:15:60]);
+% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_c0.fig'); close all;
 
-System          = 'Inch_DSP';
-parameters      = [];
-initial         = [0,0,0,0,0,0,0,0];
-ap              = [2];
-ip		        = 2;
-flag            = 0;
+% System          = 'Inch_DSP';
+% parameters      = [1,0.01,1,0.01,8,0.25,0.01,4,0.1,1,1,1,40,10,1,1,1,1,1,1,40,1,1];
+% initial         = [0,0,0,0,0,0,0,0];
+% ap              = [2];
+% ip		        = 2;
+% flag            = 0;
 
-fig6 = Main(System,parameters,initial,ap,ip,flag);
-title('Incoherent feedforward regulation of DSP (common enzymes) (N2)','FontSize',16);
-subtitle('Removal of biphasic dose response and introduction of new behavior','Interpreter','latex');
-a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('S','Interpreter','latex'); a.FontSize=18;
-xlim([0 20]); xticks([0:5:20]); ylim([0 120]); yticks([0:30:120]);
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_b.fig'); close all;
+% fig6 = Main(System,parameters,initial,ap,ip,flag);
+% title('Incoherent feedforward regulation of DSP (common enzymes) (N2)','FontSize',16);
+% subtitle('Removal of biphasic dose response and introduction of new behavior','Interpreter','latex');
+% a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+% a = xlabel('S','Interpreter','latex'); a.FontSize=18;
+% xlim([0 20]); xticks([0:5:20]); ylim([0 120]); yticks([0:30:120]);
+% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_c.fig'); close all;
+
 %% Panel D
 % Incoherent feedfoward network - biphasic in interaction (removal of behavior)
 System          = 'Net_Bi_Inc';
@@ -261,7 +263,7 @@ ylim([0 10]); yticks([0:2:10]); xlim([0 2]); xticks([0:0.4:2]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a0.fig'); close all;
 
 System          = 'Net_Bi_PFB_Cl';
-parameters      = [1,0.01,1,0.1,0.5,1,0.1,2,1,0.1,1,0.05,4£,15];
+parameters      = [1,0.01,1,0.1,0.5,1,0.1,2,1,0.1,1,0.05,4,15];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -305,4 +307,3 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 
 clc
 toc
-
