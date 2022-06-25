@@ -112,6 +112,33 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 % a = xlabel('S','Interpreter','latex'); a.FontSize=18;
 % savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_c.fig'); close all;
 
+%% Upstream regulation of DSP (commmon enzymes) - Interaction of the two biphasic
+System          = 'Bi_DSP';
+parameters      = [0,0.01,0.02,40,0.001,2.25*0.5,sqrt(2)/75,0.5,0.1,10,1,10,10,1,1,1,1,1,1,60,75,3];
+initial         = [0,0,0,0,0,0,0];
+ap              = [2];
+ip		      = 2;
+flag            = 0;
+
+fig20 = Main(System,parameters,initial,ap,ip,flag);
+xlim([0 25]); xticks('auto'); ylim([0 20]); yticks([0:5:20]);
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_c0.fig'); close all;
+
+System          = 'Bi_DSP';
+parameters      = [1,0.01,0.02,40,0.001,2.25*0.5,sqrt(2)/2,0.5,0.1,10,1,10,10,1,1,1,1,1,1,60,75,3];
+initial         = [0,0,0,0,0,0,0];
+ap              = [2];
+ip		      = 2;
+flag            = 0;
+
+fig2 = Main(System,parameters,initial,ap,ip,flag);
+title('Upstream Signal Regulation of DSP (common enzymes) (N1)','FontSize',16);
+subtitle('Interaction of the two biphasics to present multiphasic response','Interpreter','latex');
+a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+a = xlabel('S','Interpreter','latex'); a.FontSize=18;
+xlim([0 25]); xticks('auto'); ylim([0 20]); yticks([0:5:20]);
+savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_c.fig'); close all;
+
 %% Panel C
 % Incoherent Feedforward in DSP - Inducing multiphasic response
 System          = 'Inch_DSP';
