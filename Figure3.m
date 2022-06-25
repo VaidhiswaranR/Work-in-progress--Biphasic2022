@@ -112,15 +112,15 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 % a = xlabel('S','Interpreter','latex'); a.FontSize=18;
 % savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_c.fig'); close all;
 
-%% Upstream regulation of DSP (commmon enzymes) - Interaction of the two biphasic
+% Upstream regulation of DSP (commmon enzymes) - Interaction of the two biphasic
 System          = 'Bi_DSP';
-parameters      = [0,0.01,0.02,40,0.001,2.25*0.5,sqrt(2)/75,0.5,0.1,10,1,10,10,1,1,1,1,1,1,60,75,3];
+parameters      = [0,0.01,0.02,40,0.001,2.25*0.5,sqrt(2)/2,0.5,0.1,10,1,10,10,1,1,1,1,1,1,60,75,3];
 initial         = [0,0,0,0,0,0,0];
 ap              = [2];
 ip		      = 2;
 flag            = 0;
 
-fig20 = Main(System,parameters,initial,ap,ip,flag);
+fig40 = Main(System,parameters,initial,ap,ip,flag);
 xlim([0 25]); xticks('auto'); ylim([0 20]); yticks([0:5:20]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_c0.fig'); close all;
 
@@ -131,7 +131,7 @@ ap              = [2];
 ip		      = 2;
 flag            = 0;
 
-fig2 = Main(System,parameters,initial,ap,ip,flag);
+fig4 = Main(System,parameters,initial,ap,ip,flag);
 title('Upstream Signal Regulation of DSP (common enzymes) (N1)','FontSize',16);
 subtitle('Interaction of the two biphasics to present multiphasic response','Interpreter','latex');
 a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
@@ -142,18 +142,18 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 %% Panel C
 % Incoherent Feedforward in DSP - Inducing multiphasic response
 System          = 'Inch_DSP';
-parameters      = [0,0.001,0.02,0.001,40,0.1,0.001,0.4,0.5,0.1,10,1,10,10,1,1,1,1,1,1,60,75,3];
+parameters      = [0,0.001,0.02,0.001,40,0.1,0.001,0.4,3,0.1,10,1,10,10,1,1,1,1,1,1,60,75,3];
 initial         = [0,0,0,0,0,0,0,0];
 ap              = [2];
 ip		        = 2;
 flag            = 0;
 
 fig50 = Main(System,parameters,initial,ap,ip,flag);
-xlim([0 80]); xticks([0:20:80]); ylim([0 16]); yticks([0:4:16]);
+xlim([0 30]); xticks([0:6:30]); ylim([0 16]); yticks([0:4:16]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_a0.fig'); close all;
 
 System          = 'Inch_DSP';
-parameters      = [1,0.001,0.02,0.001,40,0.1,0.001,0.4,0.5,0.1,10,1,10,10,1,1,1,1,1,1,60,75,3];
+parameters      = [1,0.001,0.02,0.001,40,0.1,0.001,0.4,3,0.1,10,1,10,10,1,1,1,1,1,1,60,75,3];
 initial         = [0,0,0,0,0,0,0,0];
 ap              = [2];
 ip		        = 2;
@@ -164,7 +164,7 @@ title('Incoherent feedforward regulation of DSP (common enzymes) (N2)','FontSize
 subtitle('Induction multiphasic dose response','Interpreter','latex');
 a = ylabel('$A_{pp}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
-xlim([0 40]); xticks([0:10:40]); 
+xlim([0 30]); xticks([0:6:30]);  ylim([0 16]); yticks([0:4:16])
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_a.fig'); close all;
 
 % Incoherent Feedforward in DSP - Removal of biphasic by interaction
@@ -176,7 +176,7 @@ ip		        = 2;
 flag            = 0;
 
 fig60 = Main(System,parameters,initial,ap,ip,flag);
-xlim([0 20]); xticks([0:5:20]); ylim([0 60]); yticks([0:15:60]);
+xlim([0 20]); xticks([0:5:20]); ylim([0 50]); yticks([0:10:50]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_b0.fig'); close all;
 
 System          = 'Inch_DSP';
@@ -224,7 +224,10 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 %% Panel D
 % Incoherent feedfoward network - biphasic in interaction (removal of behavior)
 System          = 'Net_Bi_Inc';
-parameters      = [0,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+% parameters      = [0,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+parameters      = [0,2.25*2,sqrt(2)/5,1e-2,1,0.1,0.05,0.5,1,1,0.05,0.2,2,1,0.01,0.1,0.02,0.01,10,2,25];
+% b1 = 2.25*k1;
+% b2 = aqrt(2)/ATotal
 initial         = [0,0,0];
 ap              = [4];
 ip		        = 3;
@@ -235,7 +238,8 @@ xlim([0 80]); xticks([0:20:80]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_a0.fig'); close all;
 
 System          = 'Net_Bi_Inc';
-parameters      = [1,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+parameters      = [1,2.25*2,sqrt(2)/5,1e-2,1,0.1,0.05,0.5,1,1,0.05,0.2,2,1,0.01,0.1,0.02,0.01,10,2,25];
+% parameters      = [1,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
 initial         = [0,0,0];
 ap              = [4];
 ip		        = 3;
@@ -249,11 +253,13 @@ a = xlabel('S','Interpreter','latex'); a.FontSize=18;
 xlim([0 80]); xticks([0:20:80]); 
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_a.fig'); close all;
 
-
-% Incoherent feedfoward network - biphasic in interaction (removal of behavior)
+%% Incoherent feedfoward network - biphasic in interaction (removal of behavior)
 %%%%% THIS NEEDS WORK - PLEASE LOOK INTO IT
 System          = 'Net_Bi_Inc';
-parameters      = [0,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+% parameters      = [0,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+parameters      = [0,2.25*1,sqrt(2)/3,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+% b1 = 2.25*k1;
+% b2 = aqrt(2)/ATotal
 initial         = [0,0,0];
 ap              = [4];
 ip		        = 3;
@@ -263,7 +269,8 @@ fig80 = Main(System,parameters,initial,ap,ip,flag);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_b0.fig'); close all;
 
 System          = 'Net_Bi_Inc';
-parameters      = [1,3,0.4,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+% parameters      = [1,3,0.4,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+parameters      = [0,2.25*1,sqrt(2)/3,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
 initial         = [0,0,0];
 ap              = [4];
 ip		        = 3;
@@ -307,7 +314,10 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 %% Panel F
 % Negative feedback network - perturbation of homeostatic response
 System          = 'Net_Bi_NFB_Cl';
-parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.01,0.1,0.1,0.1,0.01,3,5];
+% parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.01,0.1,0.1,0.1,0.01,3,5];
+parameters      = [0,0.01,2.25*0.1,sqrt(2)/5,0.1,0.1,0.1,4,0.1,0.01,200,1];
+% b1 = 2.25*k1;
+% b2 = sqrt(2)/ATotal;
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -318,7 +328,9 @@ xlim([0 80]); ylim([0 40]); xticks('auto'); yticks('auto');
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3F_a0.fig'); close all;
 
 System          = 'Net_Bi_NFB_Cl';
-parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.01,0.1,0.1,0.1,0.01,3];
+% parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.01,0.1,0.1,0.1,0.01,3];
+parameters      = [1,0.01,2.25*0.1,sqrt(2)/1,1,0.01,1,0.1,10,0.1,40,5];
+% Switch,S,b1,b2,k1,K1,k2,k3,k4,K4,RTotal,ATotal
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
