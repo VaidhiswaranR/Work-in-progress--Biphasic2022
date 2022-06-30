@@ -19,7 +19,7 @@ ip              = 3;
 flag            = 0;
 
 fig1 = Main(System,parameters,initial,ap,ip,flag);
-title('Random DSP: Common kinase and common phosphatase','FontSize',16);
+title('Random DSP: common kinase and common phosphatase','FontSize',16);
 subtitle('Substrate biphasic response - $A_{11}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{11}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;

@@ -96,7 +96,7 @@ ip              = 2;
 flag            = 1;
 
 fig6 = Main(System,parameters,initial,ap,ip,flag)
-title('Cascaded enzymatic network (M6)','FontSize',16);
+title('Two tier cascaded enzymatic network (M6)','FontSize',16);
 subtitle('Substrate biphasic response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
