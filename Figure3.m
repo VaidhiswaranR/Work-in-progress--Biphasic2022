@@ -286,18 +286,18 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 %% Panel E
 % Positive feedback network - perturbation of bistable response
 System          = 'Net_Bi_PFB_Cl';
-parameters      = [0,0.01,1,0.1,0.5,1,0.1,2,1,0.1,1,0.05,4,15];
+parameters      = [0,0.001,2.25*5,sqrt(2)/3,0.01,1,0.01,2,10,0.1,1,0.1,3,20];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
 flag            = 0;
 
 fig90 = Main(System,parameters,initial,ap,ip,flag);
-ylim([0 10]); yticks([0:2:10]); xlim([0 2]); xticks([0:0.4:2]);
+ylim([0 24]); yticks([0:6:24]); xlim([0 1]); xticks([0:0.25:1]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a0.fig'); close all;
 
 System          = 'Net_Bi_PFB_Cl';
-parameters      = [1,0.01,1,0.1,0.5,1,0.1,2,1,0.1,1,0.05,4,15];
+parameters      = [1,0.001,2.25*5,sqrt(2)/3,0.01,1,0.01,2,10,0.1,1,0.1,3,20];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -308,16 +308,17 @@ title('Biphasic interaction within PFB network motif (N4)','FontSize',16);
 subtitle('Removal of multistability','Interpreter','latex');
 a = ylabel('R','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
-ylim([0 10]); yticks([0:2:10]); xlim([0 2]); xticks([0:0.4:2]);
+ylim([0 60]); yticks([0:15:60]); xlim([0 1]); xticks([0:0.25:1]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a.fig'); close all;
 
 %% Panel F
 % Negative feedback network - perturbation of homeostatic response
 System          = 'Net_Bi_NFB_Cl';
 % parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.01,0.1,0.1,0.1,0.01,3,5];
-parameters      = [0,0.01,2.25*0.1,sqrt(2)/5,0.1,0.1,0.1,4,0.1,0.01,200,1];
+parameters      = [0,0.01,13.02663672*0.1,1,0.1,2,0.1,0.1,0.1,0.5,50,5];
 % b1 = 2.25*k1;
 % b2 = sqrt(2)/ATotal;
+
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -328,9 +329,11 @@ xlim([0 80]); ylim([0 40]); xticks('auto'); yticks('auto');
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3F_a0.fig'); close all;
 
 System          = 'Net_Bi_NFB_Cl';
-% parameters      = [0,0.01,0.5,0.8,0.1,0.1,0.01,0.1,0.1,0.1,0.01,3];
-parameters      = [1,0.01,2.25*0.1,sqrt(2)/1,1,0.01,1,0.1,10,0.1,40,5];
-% Switch,S,b1,b2,k1,K1,k2,k3,k4,K4,RTotal,ATotal
+% parameters      = [0,0.01,2.25*7.718010438915302,1.394023487495456,0.386877059992582,0.797140916159629,7.718010438915302,7.666257120869773,1.710594172111084,0.177905914032461,0.0030,3];
+% parameters      = [1,0.01,2.25*3,sqrt(2)/3,20,30,0.5,0.1,20,20,120,3];
+parameters      = [1,0.01,13.02663672*0.1,1,0.1,2,0.1,0.1,0.1,0.5,50,5];
+%                   Switch,S,b1,b2,k1,K1,k2,k3,k4,K4,RTotal,ATotal
+% Switch,S,b1,b2,k0,k1,k2,k3,k4,K3,K4,ATotal
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;

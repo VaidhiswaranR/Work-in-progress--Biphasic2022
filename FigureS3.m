@@ -11,7 +11,9 @@ close all
 %% Panel A
 % Results pertaining to the NFB with the open system model
 System          = 'Net_Bi_NFB';
-parameters      = [0,0.01,0.5,sqrt(2)/3,0.1,0.1,0.001,0.1,2,0.1,0.01,3];
+% Switch,S,b1,b2,k0,k1,k2,k3,k4,K3,K4,ATotal
+% parameters      = [0,0.01,2.25*0.1,sqrt(2)/4,0.1,0.1,0.001,0.1,2,0.1,0.01,4];
+parameters      = [0,0.01,2.25*0.1,sqrt(2)/4,0.1,0.1,0.01,0.1,1,0.02,0.05,4];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -23,7 +25,7 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 
 System          = 'Net_Bi_NFB';
 % parameters      = [1,0.01,0.5,0.8,0.1,0.1,0.001,0.1,2,0.1,0.01,3];
-parameters      = [1,0.01,0.5,0.8,0.1,0.1,0.001,0.1,2,0.1,0.01,3];
+parameters      = [1,0.01,2.25*0.2,sqrt(2)/3,0.2,0.2,0.05,0.1,1,0.01,0.1,3];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -42,7 +44,7 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 % Results pertaining to the PFB with the open system model
 System          = 'Net_Bi_PFB';
 % Switch,S,b1,b2,k0,k1,k2,k3,k4,K3,K4,ATotal
-parameters      = [0,0.01,2.25*0.5,sqrt(2)/1,0.01,0.5,3,1,1,0.5,0.1,1];
+parameters      = [0,0.01,2.25*0.5,sqrt(2)/2,0.01,0.5,3,1,1,0.5,0.8,2];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -54,7 +56,7 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 
 System          = 'Net_Bi_PFB';
 % parameters      = [1,0.01,0.1,5,0.01,0.5,1,1,1,0.5,0.1,3];
-parameters      = [1,0.01,2.25*0.5,sqrt(2)/2,0.01,0.5,3,1,1,0.5,0.1,2];
+parameters      = [1,0.01,2.25*0.5,sqrt(2)/2,0.01,0.5,3,1,1,0.5,0.8,2];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
