@@ -49,7 +49,7 @@ flag            = 0;
 
 fig1 = Main(System,parameters,initial,ap,ip,flag);
 title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
-subtitle('Multistability','Interpreter','latex');
+subtitle('Presence of Multistability','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K_{Total}}$','Interpreter','latex'); a.FontSize=18;
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS1/FigS1B_b.fig'); close all;
