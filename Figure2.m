@@ -17,7 +17,7 @@ ip              = 1;
 flag            = 0;
 
 fig1 = Main(System,parameters,initial,ap,ip,flag);
-title('Protein-Protein Interaction model (M1)','FontSize',16);
+title('Protein-Protein Interaction Model (M1)','FontSize',16);
 subtitle('Enzyme biphasic dose response - $A_{p}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{p}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
@@ -34,7 +34,7 @@ ip              = 2;
 flag            = 0;
 
 fig2 = Main(System,parameters,initial,ap,ip,flag);
-title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
+title('DSP: Common Kinase and Common Phosphatase (M2)','FontSize',16);
 subtitle('Substrate biphasic dose response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
@@ -49,7 +49,7 @@ ip              = 2;
 flag            = 0;
 
 fig3 = Main(System,parameters,initial,ap,ip,flag);
-title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
+title('DSP: Common Kinase and Common Phosphatase (M2)','FontSize',16);
 subtitle('Enzyme biphasic dose response - $A_{pp}$ vs $K_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K_{Total}}$','Interpreter','latex'); a.FontSize=18;
@@ -66,7 +66,7 @@ ip              = 2;
 flag            = 0;
 
 fig4 = Main(System,parameters,initial,ap,ip,flag);
-title('DSP: Common kinase and separate phosphatase (M3)','FontSize',16);
+title('DSP: Common Kinase and Separate Phosphatase (M3)','FontSize',16);
 subtitle('Substrate biphasic dose response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
@@ -83,7 +83,7 @@ ip              = 2;
 flag            = 1;
 
 fig5 = Main(System,parameters,initial,ap,ip,flag);
-title('DSP: Separate kinase and common phosphatase (M4)','FontSize',16);
+title('DSP: Separate Kinase and Common Phosphatase (M4)','FontSize',16);
 subtitle('Enzyme biphasic dose response - $A_{pp}$ vs $K2_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K2_{Total}}$','Interpreter','latex'); a.FontSize=18;
@@ -100,7 +100,7 @@ ip              = 2;
 flag            = 1;
 
 fig6 = Main(System,parameters,initial,ap,ip,flag)
-title('Cascaded enzymatic network (M6)','FontSize',16);
+title('Cascaded Enzymatic Network (M6)','FontSize',16);
 subtitle('Substrate biphasic dose response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
@@ -117,7 +117,7 @@ ip              = 4;
 flag            = 0;
 
 fig7 = Main(System,parameters,initial,ap,ip,flag);
-title('Coupled Covalent modifications (M7)','FontSize',16);
+title('Coupled Covalent Modifications (M7)','FontSize',16);
 subtitle('Substrate biphasic dose response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
