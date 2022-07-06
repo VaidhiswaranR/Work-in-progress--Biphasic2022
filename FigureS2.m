@@ -19,11 +19,11 @@ ip              = 3;
 flag            = 0;
 
 fig1 = Main(System,parameters,initial,ap,ip,flag);
-title('Random DSP: common kinase and common phosphatase','FontSize',16);
+title('Random DSP: Common Kinase and Common Phosphatase','FontSize',16);
 subtitle('Substrate biphasic response - $A_{11}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{11}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
-xlim([0 150]); xticks([0:30:150]); 
+xlim([0 200]); xticks([0:50:200]); 
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS2/FigS2A.fig'); close all;
 
 
@@ -38,11 +38,11 @@ ip              = 3;
 flag            = 1;
 
 fig1 = Main(System,parameters,initial,ap,ip,flag);
-title('Random DSP: Common kinase and common phosphatase','FontSize',16);
+title('Random DSP: Common Kinase and Common Phosphatase','FontSize',16);
 subtitle('Enzyme biphasic response - $A_{11}$ vs $K2_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K2_{Total}}$','Interpreter','latex'); a.FontSize=18;
-xlim([0 250]); xticks([0:50:250]); 
+xlim([0 280]); xticks([0:70:280]); 
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS2/FigS2B.fig'); close all;
 
 toc

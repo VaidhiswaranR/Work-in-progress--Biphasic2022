@@ -21,7 +21,7 @@ title('Ordered Model of Erk Regulation','FontSize',16);
 subtitle('Substrate biphasic response - pYpTErk vs $Erk_{Total}$','Interpreter','latex');
 a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=15;
 a = xlabel('$Erk_{Total}$','Interpreter','latex'); a.FontSize=15;
-xlim([0 200]); ylim([0 3]); xticks('auto'); yticks('auto'); zticks('auto');
+xlim([0 200]); ylim([0 4]); xticks([0:50:200]); yticks([0:1:4]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4A.fig'); close all;
 
 %% Panel B 
@@ -38,7 +38,7 @@ title('Ordered Model of Erk Regulation','FontSize',16);
 subtitle('Enzyme biphasic response - pYpTErk vs $Mek_{Total}$','Interpreter','latex');
 a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=15;
 a = xlabel('$Mek_{Total}$','Interpreter','latex'); a.FontSize=15;
-xlim([0 180]); ylim([0 60]); xticks('auto'); yticks('auto'); zticks('auto');
+xlim([0 200]); ylim([0 60]); xticks([0:50:200]); yticks([0:15:60]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4B.fig'); close all;
 
 %% Panel C

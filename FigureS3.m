@@ -20,7 +20,7 @@ ip		        = 1;
 flag            = 0;
 
 fig10 = Main(System,parameters,initial,ap,ip,flag);
-xlim([0 80]); ylim([0 40]); xticks('auto'); yticks('auto');
+xlim([0 32]); ylim([0 12]); xticks([0:8:32]); yticks([0:3:12]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS3/FigS3_a0.fig'); close all;
 
 System          = 'Net_Bi_NFB';
@@ -33,10 +33,11 @@ flag            = 0;
 
 fig10 = Main(System,parameters,initial,ap,ip,flag);
 xlim([0 80]); ylim([0 40]); xticks('auto'); yticks('auto');
-title('Biphasic interaction within NFB network motif (Open system)','FontSize',16);
+title('Biphasic Interaction within NFB Network Motif (Open system)','FontSize',16);
 subtitle('Perturbation of homeostatic response','Interpreter','latex');
 a = ylabel('Rp','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
+xlim([0 32]); ylim([0 12]); xticks([0:8:32]); yticks([0:3:12]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS3/FigS3_a.fig'); close all;
 
 
@@ -51,7 +52,7 @@ ip		        = 1;
 flag            = 0;
 
 fig90 = Main(System,parameters,initial,ap,ip,flag);
-ylim([0 20]); yticks([0:4:20]); xlim([0 15]); xticks([0:3:15]);
+ylim([0 4]); yticks([0:1:4]); xlim([0 12]); xticks([0:3:12]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS3/FigS3_b0.fig'); close all;
 
 System          = 'Net_Bi_PFB';
@@ -63,11 +64,11 @@ ip		        = 1;
 flag            = 0;
 
 fig9 = Main(System,parameters,initial,ap,ip,flag);
-title('Biphasic interaction within PFB network motif (Open system)','FontSize',16);
+title('Biphasic Interaction within PFB Network Motif (Open system)','FontSize',16);
 subtitle('Removal of multistability','Interpreter','latex');
 a = ylabel('R','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
-ylim([0 12]); yticks([0:4:12]); xlim([0 250]); xticks([0:50:250]);
+ylim([0 4]); yticks([0:1:4]); xlim([0 12]); xticks([0:3:12]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS3/FigS3_b.fig'); close all;
 
 toc
