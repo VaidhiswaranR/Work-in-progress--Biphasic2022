@@ -104,7 +104,7 @@ title('Cascaded enzymatic network (M6)','FontSize',16);
 subtitle('Substrate biphasic dose response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
-xlim([0 100]); xticks('auto'); ylim([0 16]); yticks([0:4:16])
+xlim([0 80]); xticks([0:20:80]); ylim([0 16]); yticks([0:4:16])
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2E.fig'); close all;
 
 %% Panel F
