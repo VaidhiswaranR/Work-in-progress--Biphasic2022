@@ -121,7 +121,7 @@ title('Coupled Covalent modifications (M7)','FontSize',16);
 subtitle('Substrate biphasic dose response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
-xlim([0 100]); xticks('auto'); ylim([0 8]); yticks([0:5:20]); 
+xlim([0 120]); xticks([0:30:120]); ylim([0 8]); yticks([0:2:8]); 
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2F.fig'); close all;
 
 clc
