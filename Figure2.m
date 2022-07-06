@@ -21,7 +21,7 @@ title('Protein-Protein Interaction model (M1)','FontSize',16);
 subtitle('Enzyme biphasic dose response - $A_{p}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{p}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
-xlim([0 80]); xticks('auto'); 
+xlim([0 80]); xticks([0:20:80]); ylim([0 8]); yticks([0:2:8]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2A.fig'); close all;
 
 %% Panel B
@@ -38,7 +38,7 @@ title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
 subtitle('Substrate biphasic dose response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
-xlim([0 30]); xticks('auto')
+xlim([0 40]); xticks([0:10:40]); ylim([0 1]); yticks([0:0.25:1]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2B_a.fig'); close all;
 
 System          = 'DSP_ComK_ComP';
@@ -53,7 +53,7 @@ title('DSP: Common kinase and common phosphatase (M2)','FontSize',16);
 subtitle('Enzyme biphasic dose response - $A_{pp}$ vs $K_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K_{Total}}$','Interpreter','latex'); a.FontSize=18;
-xlim([0 75]); xticks('auto'); 
+xlim([0 80]); xticks([0:20:80]); ylim([0 4]); yticks([0:1:4]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2B_b.fig'); close all;
 
 %% Panel C
@@ -70,6 +70,7 @@ title('DSP: Common kinase and separate phosphatase (M3)','FontSize',16);
 subtitle('Substrate biphasic dose response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{A_{Total}}$','Interpreter','latex'); a.FontSize=18;
+xlim([0 40]); xticks([0:10:40]); ylim([0 4]); yticks([0:1:4]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2C.fig'); close all;
 
 %% Panel D
@@ -86,7 +87,7 @@ title('DSP: Separate kinase and common phosphatase (M4)','FontSize',16);
 subtitle('Enzyme biphasic dose response - $A_{pp}$ vs $K2_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{K2_{Total}}$','Interpreter','latex'); a.FontSize=18;
-xlim([0 60]); xticks('auto'); %ylim([0 8]); yticks('auto')
+xlim([0 60]); xticks([0:15:60]); ylim([0 8]); yticks([0:2:8])
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2D.fig'); close all;
 
 %% Panel E
@@ -103,7 +104,7 @@ title('Cascaded enzymatic network (M6)','FontSize',16);
 subtitle('Substrate biphasic dose response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
-xlim([0 100]); xticks('auto');
+xlim([0 100]); xticks('auto'); ylim([0 16]); yticks([0:4:16])
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2E.fig'); close all;
 
 %% Panel F
@@ -120,7 +121,7 @@ title('Coupled Covalent modifications (M7)','FontSize',16);
 subtitle('Substrate biphasic dose response - $B_p$ vs $B_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{B_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
 a = xlabel('$\bf{B_{Total}}$','Interpreter','latex'); a.FontSize=18;
-xlim([0 100]); xticks('auto'); %ylim([0 8]); yticks('auto'); 
+xlim([0 100]); xticks('auto'); ylim([0 8]); yticks([0:5:20]); 
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F2/Fig2F.fig'); close all;
 
 clc
