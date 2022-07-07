@@ -32,8 +32,8 @@ fig10 = Main(System,parameters,initial,ap,ip,flag);
 xlim([0 80]); ylim([0 40]); xticks('auto'); yticks('auto');
 title('Biphasic Interaction within NFB Network Motif (Open system)','FontSize',16);
 subtitle('Perturbation of homeostatic response','Interpreter','latex');
-a = ylabel('\textbf{R}','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+a = ylabel('\bf{R}','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 xlim([0 60]); ylim([0 16]); xticks([0:15:60]); yticks([0:4:16]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS3/FigS3_a.fig'); close all;
 
@@ -61,8 +61,8 @@ flag            = 0;
 fig2 = Main(System,parameters,initial,ap,ip,flag);
 title('Biphasic Interaction within PFB Network Motif (Open system)','FontSize',16);
 subtitle('Removal of multistability','Interpreter','latex');
-a = ylabel('\textbf{R}','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+a = ylabel('\bf{R}','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 ylim([0 2]); yticks([0:0.5:2]); xlim([0 160]); xticks([0:40:160]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/FS3/FigS3_b.fig'); close all;
 
