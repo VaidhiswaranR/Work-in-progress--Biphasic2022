@@ -34,7 +34,7 @@ ap              = [14];
 ip              = 2;
 flag            = 0;
 
-fig1 = Main(System,parameters,initial,ap,ip,flag);
+fig2 = Main(System,parameters,initial,ap,ip,flag);
 title('DSP: Common Kinase and Common Phosphatase (M2)','FontSize',16);
 subtitle('Enzyme biphasic response - $A_{pp}$ vs $K_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
@@ -49,7 +49,7 @@ ap              = [14];
 ip              = 2;
 flag            = 0;
 
-fig1 = Main(System,parameters,initial,ap,ip,flag);
+fig3 = Main(System,parameters,initial,ap,ip,flag);
 title('DSP: Common Kinase and Common Phosphatase (M2)','FontSize',16);
 subtitle('Presence of multistability','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;
@@ -66,7 +66,7 @@ ap              = [13];
 ip              = 2;
 flag            = 0;
 
-fig3 = Main(System,parameters,initial,ap,ip,flag);
+fig4 = Main(System,parameters,initial,ap,ip,flag);
 title('DSP: Common Kinase and Separate Phosphatase (M3)','FontSize',16);
 subtitle('Substrate biphasic response - $A_{pp}$ vs $A_{Total}$','Interpreter','latex');
 a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','middle','HorizontalAlignment','right'); a.FontSize=18;

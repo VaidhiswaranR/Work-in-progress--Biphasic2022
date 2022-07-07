@@ -19,8 +19,8 @@ flag            = 0;
 fig1 = Main(System,parameters,initial,ap,ip,flag);
 title('Ordered Model of Erk Regulation','FontSize',16);
 subtitle('Substrate biphasic response - pYpTErk vs $Erk_{Total}$','Interpreter','latex');
-a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=15;
-a = xlabel('$Erk_{Total}$','Interpreter','latex'); a.FontSize=15;
+a = ylabel('$\textbf{pYpTErk}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=15;
+a = xlabel('$\textbf{Erk_{Total}}$','Interpreter','latex'); a.FontSize=15;
 xlim([0 200]); ylim([0 4]); xticks([0:50:200]); yticks([0:1:4]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4A.fig'); close all;
 
@@ -36,14 +36,13 @@ flag            = 0;
 fig2 = Main(System,parameters,initial,ap,ip,flag);
 title('Ordered Model of Erk Regulation','FontSize',16);
 subtitle('Enzyme biphasic response - pYpTErk vs $Mek_{Total}$','Interpreter','latex');
-a = ylabel('$pYpTErk$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=15;
-a = xlabel('$Mek_{Total}$','Interpreter','latex'); a.FontSize=15;
+a = ylabel('$\textbf{pYpTErk}$','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=15;
+a = xlabel('$\textbf{Mek_{Total}}$','Interpreter','latex'); a.FontSize=15;
 xlim([0 200]); ylim([0 60]); xticks([0:50:200]); yticks([0:15:60]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F4/Fig4B.fig'); close all;
 
 %% Panel C
 % Landscape plot showing the presence of both biphasic responses in the system
-
 k1 	    = 0.1;  k2 	    = 1;    k4 	    = 10;
 p2 	    = 0.01; p3 	    = 40;   p4 	    = 1;
 kb1 	= 1;    kb2 	= 1;    kb4 	= 1;
@@ -73,7 +72,6 @@ for i = 1:1:m
 			disp('Hey there is multistability here')
 			Sol(i,j) = max(App);
 			Sol2(i,j) = min(App);
-			% pause
 		else
 			Sol(i,j) = App;
 			Sol2(i,j) = App;
@@ -99,10 +97,9 @@ Extract  = Sol(sub2ind(size(Sol),Sub_index,[1:1:n]));
 plot3(ErkTotal(1,:),MekTotal(Sub_index,1),Extract,'LineWidth',3.5);
 Extract  = Sol(sub2ind(size(Sol),[1:1:m],En_index));
 plot3(ErkTotal(1,En_index),MekTotal(:,1),Extract,'LineWidth',3.5);
-% title(["Simultaneous existence of enzyme and substrate","biphasic dose response in Erk regulation"],'FontSize',16)
-a = ylabel('$Mek_{Total}$','Interpreter','latex','fontweight','bold','HorizontalAlignment','right'); a.FontSize = 15;
-a = xlabel('$Erk_{Total}$','Interpreter','latex','fontweight','bold','HorizontalAlignment','left'); a.FontSize = 15;
-a = zlabel('pYpTErk','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center','fontweight','bold'); a.FontSize = 15;
+a = ylabel('$\textbf{Mek_{Total}}$','Interpreter','latex','fontweight','bold','HorizontalAlignment','right'); a.FontSize = 15;
+a = xlabel('$\textbf{Erk_{Total}}$','Interpreter','latex','fontweight','bold','HorizontalAlignment','left'); a.FontSize = 15;
+a = zlabel('\textbf{pYpTErk}','Interpreter','latex','rotation',90,'VerticalAlignment','bottom','HorizontalAlignment','center','fontweight','bold'); a.FontSize = 15;
 zlim([0 2]); xlim([0 80]);  ylim([0 80]); view(3); caxis([0 2]);
 h = gca(); h.FontWeight = 'bold'; h.LineWidth = 0.8;
 xticks('auto'); yticks('auto'); zticks('auto');

@@ -31,7 +31,6 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 % Enzyme biphasic response 
 System          = 'S1_Random_DD';
 parameters      = [3,1,0.1,1,0.1,10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,50,2,0.01,12,12];
-% parameters      = [3,1,0.1,1,0.1,10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,50,2,0.01,6,6];
 initial         = [0,0,0,0,0,0,0,0,0,0,0];
 ap              = [27];
 ip              = 3;
