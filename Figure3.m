@@ -223,24 +223,20 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 % savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_c.fig'); close all;
 
 %% Panel D
-% Incoherent feedfoward network - biphasic in interaction (removal of behavior)
+% Incoherent feedfoward network - biphasic in interaction (Introduction of multiphasic behavior)
 System          = 'Net_Bi_Inc';
-% parameters      = [0,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
-parameters      = [0,2.25*2,sqrt(2)/5,1e-2,1,0.1,0.05,0.5,1,1,0.05,0.2,2,1,0.01,0.1,0.02,0.01,10,2,25];
-% b1 = 2.25*k1;
-% b2 = aqrt(2)/ATotal
+parameters      = [0,2.42*2,sqrt(2)/2,1e-2,1,1,0.1,1,1,1,0.1,4,2,2,0.1,1,2,4];
 initial         = [0,0,0];
 ap              = [4];
 ip		        = 3;
 flag            = 0;
 
 fig70 = Main(System,parameters,initial,ap,ip,flag);
-xlim([0 80]); xticks([0:20:80]); 
+xlim([0 20]); xticks([0:5:20]); ylim([0 4]); yticks([0:1:4]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_a0.fig'); close all;
 
 System          = 'Net_Bi_Inc';
-parameters      = [1,2.25*2,sqrt(2)/5,1e-2,1,0.1,0.05,0.5,1,1,0.05,0.2,2,1,0.01,0.1,0.02,0.01,10,2,25];
-% parameters      = [1,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+parameters      = [1,2.42*2,sqrt(2)/2,1e-2,1,1,0.1,1,1,1,0.1,4,2,2,0.1,1,2,4];
 initial         = [0,0,0];
 ap              = [4];
 ip		        = 3;
@@ -248,19 +244,15 @@ flag            = 0;
 
 fig7 = Main(System,parameters,initial,ap,ip,flag);
 title('Biphasic Interaction within iFFW Network Motif (N3)','FontSize',16);
-subtitle('Removal of biphasic dose response','Interpreter','latex');
+subtitle('Introduction of multiphasic dose response','Interpreter','latex');
 a = ylabel('$R_s$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
-xlim([0 80]); xticks([0:20:80]); 
+xlim([0 20]); xticks([0:5:20]); ylim([0 2]); yticks([0:0.5:2]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_a.fig'); close all;
 
-% Incoherent feedfoward network - biphasic in interaction (removal of behavior)
-%%%%% THIS NEEDS WORK - PLEASE LOOK INTO IT
+%% Incoherent feedfoward network - biphasic in interaction (removal of behavior)
 System          = 'Net_Bi_Inc';
-% parameters      = [0,3,0.5,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
-parameters      = [0,2.25*1,sqrt(2)/3,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
-% b1 = 2.25*k1;
-% b2 = aqrt(2)/ATotal
+parameters      = [0,2.42*2,sqrt(2)/2,1e-2,2,1,5,4,2,1,0.1,1,5,2,0.1,2,2,3];
 initial         = [0,0,0];
 ap              = [4];
 ip		        = 3;
@@ -270,8 +262,7 @@ fig80 = Main(System,parameters,initial,ap,ip,flag);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_b0.fig'); close all;
 
 System          = 'Net_Bi_Inc';
-% parameters      = [1,3,0.4,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
-parameters      = [0,2.25*1,sqrt(2)/3,1e-2,1,0.1,0.05,0.05,4,1,0.1,0.5,1,1,0.01,0.1,0.05,0.05,3,3,5];
+parameters      = [1,2.42*2,sqrt(2)/2,1e-2,2,1,5,4,2,1,0.1,1,5,2,0.1,2,2,3];
 initial         = [0,0,0];
 ap              = [4];
 ip		        = 3;
@@ -287,18 +278,18 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 %% Panel E
 % Positive feedback network - perturbation of bistable response
 System          = 'Net_Bi_PFB_Cl';
-parameters      = [0,0.001,2.25*5,sqrt(2)/3,0.01,1,0.01,2,10,0.1,1,0.1,3,20];
+parameters      = [0,0.001,2.25*0.1,sqrt(2)/3,0.1,0.4,10,2,2,1,1,0.1,3,10];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
 flag            = 0;
 
 fig90 = Main(System,parameters,initial,ap,ip,flag);
-ylim([0 24]); yticks([0:6:24]); xlim([0 1]); xticks([0:0.25:1]);
+ylim([0 8]); yticks([0:2:8]); xlim([0 1]); xticks([0:0.25:1]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a0.fig'); close all;
 
 System          = 'Net_Bi_PFB_Cl';
-parameters      = [1,0.001,2.25*5,sqrt(2)/3,0.01,1,0.01,2,10,0.1,1,0.1,3,20];
+parameters      = [1,0.001,2.25*0.1,sqrt(2)/3,0.1,0.4,10,2,2,1,1,0.1,3,10];
 initial         = [0,0];
 ap              = [2];
 ip		        = 1;
@@ -309,7 +300,7 @@ title('Biphasic Interaction within PFB Network Motif (N4)','FontSize',16);
 subtitle('Removal of multistability','Interpreter','latex');
 a = ylabel('R','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
 a = xlabel('S','Interpreter','latex'); a.FontSize=18;
-ylim([0 60]); yticks([0:15:60]); xlim([0 1]); xticks([0:0.25:1]);
+ylim([0 8]); yticks([0:2:8]); xlim([0 4]); xticks([0:1:4]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a.fig'); close all;
 
 %% Panel F
