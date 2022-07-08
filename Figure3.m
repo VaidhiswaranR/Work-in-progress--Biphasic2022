@@ -30,8 +30,8 @@ flag            = 0;
 fig1 = Main(System,parameters,initial,ap,ip,flag);
 title('Upstream Signal Regulation of Covalent Modification Cycle (N0)','FontSize',16);
 subtitle('Biphasic dose response with signal','Interpreter','latex');
-a = ylabel('$\textbf{A_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+a = ylabel('$\bf{A_p}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 xlim([0 200]); xticks([0 50 100 150 200]); ylim([0 20]); yticks([0 5 10 15 20]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3A.fig'); close all;
 
@@ -59,8 +59,8 @@ flag            = 0;
 fig2 = Main(System,parameters,initial,ap,ip,flag);
 title('Upstream Signal Regulation of DSP (common enzymes) (N1)','FontSize',16);
 subtitle('Prolonged homeostasis and biphasic dose response','Interpreter','latex');
-a = ylabel('$\textbf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 xlim([0 20]); xticks([0:5:20]); ylim([0 20]); yticks([0:5:20]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_a.fig'); close all;
 
@@ -73,7 +73,7 @@ ip		        = 2;
 flag            = 0;
 
 fig30 = Main(System,parameters,initial,ap,ip,flag);
-xlim([0 4]); xticks('auto');
+xlim([0 4]); xticks([0:1:4]); ylim([0 20]); yticks([0:5:20]);
 text(1.6,3,'LP','HorizontalAlignment','left')
 text(1.2,6.5,'LP','HorizontalAlignment','left')
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_b0.fig'); close all;
@@ -88,8 +88,8 @@ flag            = 0;
 fig3 = Main(System,parameters,initial,ap,ip,flag);
 title('Upstream Signal Regulation of DSP (common enzymes) (N1)','FontSize',16);
 subtitle('Multiphasic and bistable response','Interpreter','latex');
-a = ylabel('$\textbf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 xlim([0 60]); xticks([0:15:60]); ylim([0 20]); yticks([0:5:20]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_b.fig'); close all;
 
@@ -104,7 +104,7 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 % fig4 = Main(System,parameters,initial,ap,ip,flag);
 % title('Upstream regulation of DSP (common enzymes)','FontSize',16);
 % subtitle('Perturbation of oscillatory response','Interpreter','latex');
-% a = ylabel('$A_{pp}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+% a = ylabel('$A_{pp}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
 % a = xlabel('S','Interpreter','latex'); a.FontSize=18;
 % savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_c.fig'); close all;
 
@@ -130,8 +130,8 @@ flag            = 0;
 fig4 = Main(System,parameters,initial,ap,ip,flag);
 title('Upstream Signal Regulation of DSP (common enzymes) (N1)','FontSize',16);
 subtitle('Interaction of the biphasic dose responses to present multiphasic response','Interpreter','latex');
-a = ylabel('$\textbf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 xlim([0 20]); xticks([0:5:20]); ylim([0 20]); yticks([0:5:20]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3B_c.fig'); close all;
 
@@ -157,9 +157,9 @@ flag            = 1;
 
 fig5 = Main(System,parameters,initial,ap,ip,flag);
 title('Incoherent Feedforward Regulation of DSP (common enzymes) (N2)','FontSize',16);
-subtitle('Induction multiphasic dose response','Interpreter','latex');
-a = ylabel('$\textbf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+subtitle('Introduction of multiphasic dose response','Interpreter','latex');
+a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 xlim([0 30]); xticks([0:6:30]);  ylim([0 16]); yticks([0:4:16])
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_a.fig'); close all;
 
@@ -185,8 +185,8 @@ flag            = 0;
 fig6 = Main(System,parameters,initial,ap,ip,flag);
 title('Incoherent Feedforward Regulation of DSP (common enzymes) (N2)','FontSize',16);
 subtitle('Removal of biphasic dose response and introduction of new behavior','Interpreter','latex');
-a = ylabel('$\textbf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+a = ylabel('$\bf{A_{pp}}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 xlim([0 20]); xticks([0:5:20]); ylim([0 120]); yticks([0:30:120]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_b.fig'); close all;
 
@@ -212,7 +212,7 @@ savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Fi
 % fig6 = Main(System,parameters,initial,ap,ip,flag);
 % title('Incoherent feedforward regulation of DSP (common enzymes) (N2)','FontSize',16);
 % subtitle('Removal of biphasic dose response and introduction of new behavior','Interpreter','latex');
-% a = ylabel('$A_{pp}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
+% a = ylabel('$A_{pp}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
 % a = xlabel('S','Interpreter','latex'); a.FontSize=18;
 % xlim([0 20]); xticks([0:5:20]); ylim([0 120]); yticks([0:30:120]);
 % savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3C_c.fig'); close all;
@@ -240,35 +240,38 @@ flag            = 0;
 fig7 = Main(System,parameters,initial,ap,ip,flag);
 title('Biphasic Interaction within iFFW Network Motif (N3)','FontSize',16);
 subtitle('Introduction of multiphasic dose response','Interpreter','latex');
-a = ylabel('$\textbf{R_s}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+a = ylabel('$\bf{R_s}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 xlim([0 20]); xticks([0:5:20]); ylim([0 2]); yticks([0:0.5:2]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_a.fig'); close all;
 
-% Incoherent feedfoward network - biphasic in interaction (removal of behavior)
-System          = 'Net_Bi_Inc';
-parameters      = [0,2.42*2,sqrt(2)/2,1e-2,2,1,5,4,2,1,0.1,1,5,2,0.1,2,2,3];
-initial         = [0,0,0];
-ap              = [4];
-ip		        = 3;
-flag            = 0;
-
-fig80 = Main(System,parameters,initial,ap,ip,flag);
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_b0.fig'); close all;
-
-System          = 'Net_Bi_Inc';
-parameters      = [1,2.42*2,sqrt(2)/2,1e-2,2,1,5,4,2,1,0.1,1,5,2,0.1,2,2,3];
-initial         = [0,0,0];
-ap              = [4];
-ip		        = 3;
-flag            = 0;
-
-fig8 = Main(System,parameters,initial,ap,ip,flag);
-title('Biphasic Interaction within iFFW Network Motif (N3)','FontSize',16);
-subtitle('Introduction of multiphasic dose response','Interpreter','latex');
-a = ylabel('$\textbf{R_s}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
-savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_b.fig'); close all;
+%% Incoherent feedfoward network - biphasic in interaction (removal of behavior)
+% What the F happenend here - check this immediately
+% System          = 'Net_Bi_Inc';
+% % parameters      = [0,2.25*6,sqrt(2)/2,1e-2,2,1,5,4,2,1,0.1,1,5,6,0.1,2,2,3];
+% parameters      = [0,2.42*3,sqrt(2)/1,1e-2,1,1,0.1,0.1,2,1,0.1,1,5,3,1,3,3,4];
+% initial         = [0,0,0];
+% ap              = [4];
+% ip		        = 3;
+% flag            = 0;
+% 
+% fig80 = Main(System,parameters,initial,ap,ip,flag);
+% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_b0.fig'); close all;
+% 
+% System          = 'Net_Bi_Inc';
+% % parameters      = [1,2.25*6,sqrt(2)/2,1e-2,2,1,5,4,2,1,0.1,1,5,6,0.1,2,2,3];
+% parameters      = [1,2.42*3,sqrt(2)/0.2,1e-2,1,1,0.1,0.1,2,1,0.1,1,5,3,1,3,0.2,4];
+% initial         = [0,0,0];
+% ap              = [4];
+% ip		        = 3;
+% flag            = 0;
+% 
+% fig8 = Main(System,parameters,initial,ap,ip,flag);
+% title('Biphasic Interaction within iFFW Network Motif (N3)','FontSize',16);
+% subtitle('Destructino of biphasic dose response','Interpreter','latex');
+% a = ylabel('$\bf{R_s}$','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
+% a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
+% savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3D_b.fig'); close all;
 
 %% Panel E
 % Positive feedback network - perturbation of bistable response
@@ -280,7 +283,7 @@ ip		        = 1;
 flag            = 0;
 
 fig90 = Main(System,parameters,initial,ap,ip,flag);
-ylim([0 8]); yticks([0:2:8]); xlim([0 1]); xticks([0:0.25:1]);
+ylim([0 6]); yticks([0:1.5:6]); xlim([0 1]); xticks([0:0.25:1]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a0.fig'); close all;
 
 System          = 'Net_Bi_PFB_Cl';
@@ -293,13 +296,13 @@ flag            = 0;
 fig9 = Main(System,parameters,initial,ap,ip,flag);
 title('Biphasic Interaction within PFB Network Motif (N4)','FontSize',16);
 subtitle('Removal of multistability','Interpreter','latex');
-a = ylabel('\textbf{R}','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+a = ylabel('\bf{R}','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 ylim([0 8]); yticks([0:2:8]); xlim([0 4]); xticks([0:1:4]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3E_a.fig'); close all;
 
 %% Panel F
-% Negative feedback network - perturbation of homeostatic response
+% Negative feedback network - Introduction of bistability
 System          = 'Net_Bi_NFB_Cl';
 parameters      = [0,0.01,13.02663672*0.1,1,0.1,2,0.1,0.1,0.1,0.5,50,5];
 initial         = [0,0];
@@ -308,7 +311,7 @@ ip		        = 1;
 flag            = 0;
 
 fig10 = Main(System,parameters,initial,ap,ip,flag);
-xlim([0 80]); ylim([0 40]); xticks('auto'); yticks('auto');
+xlim([0 4]); ylim([0 4]); xticks([0:1:4]); yticks([0:1:4]);
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3F_a0.fig'); close all;
 
 System          = 'Net_Bi_NFB_Cl';
@@ -319,11 +322,11 @@ ip		        = 1;
 flag            = 0;
 
 fig10 = Main(System,parameters,initial,ap,ip,flag);
-xlim([0 80]); ylim([0 40]); xticks('auto'); yticks('auto');
+xlim([0 4]); ylim([0 4]); xticks([0:1:4]); yticks([0:1:4]);
 title('Biphasic Interaction within NFB Network Motif (N5)','FontSize',16);
-subtitle('Perturbation of homeostatic response','Interpreter','latex');
-a = ylabel('\textbf{R}','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','center'); a.FontSize=18;
-a = xlabel('\textbf{S}','Interpreter','latex'); a.FontSize=18;
+subtitle('Introduction of multistable response','Interpreter','latex');
+a = ylabel('\bf{R}','Interpreter','latex','rotation',0,'VerticalAlignment','bottom','HorizontalAlignment','right'); a.FontSize=18;
+a = xlabel('\bf{S}','Interpreter','latex'); a.FontSize=18;
 savefig('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figures/F3/Fig3F_a.fig'); close all;
 
 clc
