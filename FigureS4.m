@@ -1,4 +1,4 @@
-tic 
+%% Okay we are retiring this effort because it has Hopfs and it's not worth it apart from the parameter values. tic 
 
 clear
 clc
@@ -9,12 +9,13 @@ mkdir('/Users/vaidhiswaranramesh/Desktop/Acad/Paper 9 (Biphasic) - Progress/Figu
 close all
 
 %% Panel 0 
-% Expected      = 'S2__IntegHomCont_Up';
-parameters      = [1,1,1,1,1,1,1,1,1,1];
+% Expected response from the motif
+System          = 'S2__IntegHomCont_Up';
+parameters      = [0,1,1,1,1,1,1,1,1,1];
 initial         = [1,1,1];
 ap              = [2];
 ip		        = 1;
-flag            = 0;
+flag            = 1;
 
 fig10 = Main(System,parameters,initial,ap,ip,flag);
 title('Simple regulation of Integral Control Motif by Signal','FontSize',16);
