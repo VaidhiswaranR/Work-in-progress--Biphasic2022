@@ -178,7 +178,24 @@ function fig = Main(System,p,initial,ap,ip,flag)
 			opt	=	contset(opt,'Backward',flag);
 			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
 
-	end
+		case 'S2__IntegHomCont_Up'
+
+			hls	= S2__IntegHomCont_Up;
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10));
+			x0	= C(end,:)';
+			[x0,v0]	= init_EP_EP(@S2__IntegHomCont_Up,x0,p,ap);
+			opt	=	contset(opt,'Backward',flag);
+			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
+
+		case 'S2__IntegHomCont'
+
+			hls	= S2__IntegHomCont;
+			[~,C]	= ode15s(hls{2},tspan,initial,[],p(1),p(2),p(3),p(4),p(5),p(6),p(7),p(8),p(9),p(10));
+			x0	= C(end,:)';
+			[x0,v0]	= init_EP_EP(@S2__IntegHomCont,x0,p,ap);
+			opt	=	contset(opt,'Backward',flag);
+			[x,v,s,h,f]	= cont(@equilibrium,x0,v0,opt);
+end
 
 	%%  dsfa
 
